@@ -25,6 +25,7 @@
     "build": "lerna run build",
     "clean": "lerna run clean",
     "lint": "lerna run lint",
+    "list": "lerna ls",
     "dep-check": "lerna run dep-check",
     "configure-examples": "run-s configure-examples:* release:pre:reinstall release:pre:bundle",
     "configure-examples:add-examples": "json -I -f ./lerna.json -e \"this.packages.push('examples/*'); this.packages = [...new Set(this.packages)]\"",
