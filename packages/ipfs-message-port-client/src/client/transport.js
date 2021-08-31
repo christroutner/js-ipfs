@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const { decodeError } = require('ipfs-message-port-protocol/src/error')
