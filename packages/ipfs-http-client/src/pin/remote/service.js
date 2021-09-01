@@ -5,12 +5,12 @@ const toUrlSearchParams = require('../../lib/to-url-search-params')
 
 /**
  * @typedef {import('../../types').Options} Options
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
- * @typedef {import('ipfs-core-types/src/pin/remote/service').Credentials} Credentials
- * @typedef {import('ipfs-core-types/src/pin/remote/service').RemotePinService} RemotePinService
- * @typedef {import('ipfs-core-types/src/pin/remote/service').RemotePinServiceWithStat} RemotePinServiceWithStat
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote/service').Credentials} Credentials
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote/service').RemotePinService} RemotePinService
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote/service').RemotePinServiceWithStat} RemotePinServiceWithStat
  * @typedef {import('../../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pin/remote/service').API<HTTPClientExtraOptions>} RemotePiningServiceAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote/service').API<HTTPClientExtraOptions>} RemotePiningServiceAPI
  */
 class Service {
   /**
@@ -47,7 +47,7 @@ class Service {
 
   /**
    * @param {any} json
-   * @returns {import('ipfs-core-types/src/pin/remote/service').Stat}
+   * @returns {import('@chris.troutner/ipfs-core-types/src/pin/remote/service').Stat}
    */
   static decodeStat (json) {
     switch (json.Status) {

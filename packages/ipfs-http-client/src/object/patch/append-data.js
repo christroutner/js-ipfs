@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const CID = require('cids')
@@ -9,7 +10,7 @@ const { AbortController } = require('native-abort-controller')
 
 /**
  * @typedef {import('../../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/object/patch').API<HTTPClientExtraOptions>} ObjectPatchAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/object/patch').API<HTTPClientExtraOptions>} ObjectPatchAPI
  */
 
 module.exports = configure(api => {

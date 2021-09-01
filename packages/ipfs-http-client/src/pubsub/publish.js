@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const configure = require('../lib/configure')
@@ -8,7 +9,7 @@ const { AbortController } = require('native-abort-controller')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pubsub').API<HTTPClientExtraOptions>} PubsubAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pubsub').API<HTTPClientExtraOptions>} PubsubAPI
  */
 
 module.exports = configure(api => {

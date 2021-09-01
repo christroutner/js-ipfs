@@ -6,7 +6,7 @@ const { Multiaddr } = require('multiaddr')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/bootstrap').API<HTTPClientExtraOptions>} BootstrapAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/bootstrap').API<HTTPClientExtraOptions>} BootstrapAPI
  */
 
 module.exports = configure(api => {

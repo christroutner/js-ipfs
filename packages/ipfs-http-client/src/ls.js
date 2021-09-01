@@ -7,7 +7,7 @@ const stat = require('./files/stat')
 
 /**
  * @typedef {import('./types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/root').API<HTTPClientExtraOptions>} RootAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').API<HTTPClientExtraOptions>} RootAPI
  */
 
 module.exports = configure((api, opts) => {
@@ -31,7 +31,7 @@ module.exports = configure((api, opts) => {
         hash = stats.cid
       }
 
-      /** @type {import('ipfs-core-types/src/root').IPFSEntry} */
+      /** @type {import('@chris.troutner/ipfs-core-types/src/root').IPFSEntry} */
       const entry = {
         name: link.Name,
         path: pathStr + (link.Name ? `/${link.Name}` : ''),

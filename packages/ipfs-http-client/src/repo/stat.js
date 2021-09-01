@@ -5,7 +5,7 @@ const toUrlSearchParams = require('../lib/to-url-search-params')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/repo').API<HTTPClientExtraOptions>} RepoAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/repo').API<HTTPClientExtraOptions>} RepoAPI
  */
 
 module.exports = configure(api => {

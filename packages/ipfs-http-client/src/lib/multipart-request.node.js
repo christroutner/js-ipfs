@@ -1,6 +1,6 @@
 'use strict'
 
-const normaliseInput = require('ipfs-core-utils/src/files/normalise-input')
+const normaliseInput = require('@chris.troutner/ipfs-core-utils/src/files/normalise-input')
 const { nanoid } = require('nanoid')
 const modeToString = require('./mode-to-string')
 const merge = require('merge-options').bind({ ignoreUndefined: true })
@@ -8,8 +8,8 @@ const merge = require('merge-options').bind({ ignoreUndefined: true })
 const toStream = require('it-to-stream')
 
 /**
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
  */
 
 /**

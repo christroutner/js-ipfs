@@ -6,7 +6,7 @@ const { default: parseDuration } = require('parse-duration')
 const log = require('debug')('ipfs-http-client:lib:error-handler')
 const HTTP = require('ipfs-utils/src/http')
 const merge = require('merge-options')
-const toUrlString = require('ipfs-core-utils/src/to-url-string')
+const toUrlString = require('@chris.troutner/ipfs-core-utils/src/to-url-string')
 const http = require('http')
 const https = require('https')
 

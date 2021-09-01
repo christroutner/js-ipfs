@@ -6,7 +6,7 @@ const configure = require('../lib/configure')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pin').API<HTTPClientExtraOptions>} PinAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').API<HTTPClientExtraOptions>} PinAPI
  */
 
 /**

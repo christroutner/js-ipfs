@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const uint8ArrayFromString = require('uint8arrays/from-string')
@@ -8,9 +9,9 @@ const toUrlSearchParams = require('../lib/to-url-search-params')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pubsub').Message} Message
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pubsub').Message} Message
  * @typedef {(err: Error, fatal: boolean, msg?: Message) => void} ErrorHandlerFn
- * @typedef {import('ipfs-core-types/src/pubsub').API<HTTPClientExtraOptions & { onError?: ErrorHandlerFn }>} PubsubAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pubsub').API<HTTPClientExtraOptions & { onError?: ErrorHandlerFn }>} PubsubAPI
  * @typedef {import('../types').Options} Options
  */
 

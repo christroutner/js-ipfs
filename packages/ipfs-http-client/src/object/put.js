@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const CID = require('cids')
@@ -12,7 +13,7 @@ const uint8ArrayFromString = require('uint8arrays/from-string')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/object').API<HTTPClientExtraOptions>} ObjectAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/object').API<HTTPClientExtraOptions>} ObjectAPI
  */
 
 module.exports = configure(api => {

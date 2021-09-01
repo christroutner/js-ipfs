@@ -8,7 +8,7 @@ const uint8ArrayFromString = require('uint8arrays/from-string')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/dht').API<HTTPClientExtraOptions>} DHTAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/dht').API<HTTPClientExtraOptions>} DHTAPI
  */
 
 module.exports = configure(api => {

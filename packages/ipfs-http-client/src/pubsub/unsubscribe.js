@@ -2,7 +2,7 @@
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pubsub').API<HTTPClientExtraOptions>} PubsubAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pubsub').API<HTTPClientExtraOptions>} PubsubAPI
  * @typedef {import('../types').Options} Options
  */
 

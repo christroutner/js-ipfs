@@ -2,12 +2,12 @@
 
 const CID = require('cids')
 const configure = require('../lib/configure')
-const normaliseInput = require('ipfs-core-utils/src/pins/normalise-input')
+const normaliseInput = require('@chris.troutner/ipfs-core-utils/src/pins/normalise-input')
 const toUrlSearchParams = require('../lib/to-url-search-params')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pin').API<HTTPClientExtraOptions>} PinAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').API<HTTPClientExtraOptions>} PinAPI
  */
 
 module.exports = configure(api => {

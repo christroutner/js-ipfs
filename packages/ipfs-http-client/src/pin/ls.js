@@ -6,7 +6,7 @@ const toUrlSearchParams = require('../lib/to-url-search-params')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pin').API<HTTPClientExtraOptions>} PinAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').API<HTTPClientExtraOptions>} PinAPI
  */
 
 /**
@@ -15,7 +15,7 @@ const toUrlSearchParams = require('../lib/to-url-search-params')
  * @param {Record<string, string>} metadata
  */
 function toPin (type, cid, metadata) {
-  /** @type {import('ipfs-core-types/src/pin').LsResult} */
+  /** @type {import('@chris.troutner/ipfs-core-types/src/pin').LsResult} */
   const pin = {
     type,
     cid: new CID(cid)

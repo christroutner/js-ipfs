@@ -8,7 +8,7 @@ const toUrlSearchParams = require('../lib/to-url-search-params')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/dht').API<HTTPClientExtraOptions>} DHTAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/dht').API<HTTPClientExtraOptions>} DHTAPI
  */
 
 module.exports = configure(api => {

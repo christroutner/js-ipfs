@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 'use strict'
 
 const uint8ArrayFromString = require('uint8arrays/from-string')
@@ -9,7 +11,7 @@ const { AbortController } = require('native-abort-controller')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/config').API<HTTPClientExtraOptions>} ConfigAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/config').API<HTTPClientExtraOptions>} ConfigAPI
  */
 
 module.exports = configure(api => {

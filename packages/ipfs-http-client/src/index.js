@@ -18,7 +18,7 @@ const urlSource = require('ipfs-utils/src/files/url-source')
  * @param {Options} options
  */
 function create (options = {}) {
-  /** @type {import('ipfs-core-types').IPFS & { getEndpointConfig: () => EndpointConfig }} */
+  /** @type {import('@chris.troutner/ipfs-core-types').IPFS & { getEndpointConfig: () => EndpointConfig }} */
   const client = {
     add: require('./add')(options),
     addAll: require('./add-all')(options),

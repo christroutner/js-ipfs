@@ -1,9 +1,10 @@
+// @ts-nocheck
 'use strict'
 
 const { AbortController } = require('native-abort-controller')
 
 /**
- * @typedef {import('ipfs-core-types/src/pubsub').MessageHandlerFn} MessageHandlerFn
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pubsub').MessageHandlerFn} MessageHandlerFn
  *
  * @typedef {Object} Subscription
  * @property {MessageHandlerFn} handler

@@ -2,12 +2,12 @@
 
 // Import browser version otherwise electron-renderer will end up with node
 // version and fail.
-const normaliseInput = require('ipfs-core-utils/src/files/normalise-input/index.browser')
+const normaliseInput = require('@chris.troutner/ipfs-core-utils/src/files/normalise-input/index.browser')
 const modeToString = require('./mode-to-string')
 
 /**
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
  */
 
 /**

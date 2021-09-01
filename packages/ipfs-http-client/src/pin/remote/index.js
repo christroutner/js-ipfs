@@ -7,13 +7,13 @@ const toUrlSearchParams = require('../../lib/to-url-search-params')
 
 /**
  * @typedef {import('../../types').Options} Options
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
- * @typedef {import('ipfs-core-types/src/pin/remote').Pin} Pin
- * @typedef {import('ipfs-core-types/src/pin/remote').AddOptions} AddOptions
- * @typedef {import('ipfs-core-types/src/pin/remote').Query} Query
- * @typedef {import('ipfs-core-types/src/pin/remote').Status} Status
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote').Pin} Pin
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote').AddOptions} AddOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote').Query} Query
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote').Status} Status
  * @typedef {import('../../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/pin/remote').API<HTTPClientExtraOptions>} RemotePiningAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin/remote').API<HTTPClientExtraOptions>} RemotePiningAPI
  */
 
 class Remote {

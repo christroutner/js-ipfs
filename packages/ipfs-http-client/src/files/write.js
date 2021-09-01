@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const modeToString = require('../lib/mode-to-string')
@@ -10,7 +11,7 @@ const { AbortController } = require('native-abort-controller')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/files').API<HTTPClientExtraOptions>} FilesAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/files').API<HTTPClientExtraOptions>} FilesAPI
  */
 
 module.exports = configure(api => {

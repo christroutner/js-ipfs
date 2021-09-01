@@ -5,7 +5,7 @@ const toUrlSearchParams = require('../lib/to-url-search-params')
 
 /**
  * @typedef {import('../types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/stats').API<HTTPClientExtraOptions>} StatsAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/stats').API<HTTPClientExtraOptions>} StatsAPI
  */
 
 module.exports = configure(api => {

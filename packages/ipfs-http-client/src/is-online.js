@@ -4,7 +4,7 @@ const callId = require('./id')
 
 /**
  * @typedef {import('./types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/root').API<HTTPClientExtraOptions>} RootAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').API<HTTPClientExtraOptions>} RootAPI
  */
 
 /**

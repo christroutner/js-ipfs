@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 'use strict'
 
 const CID = require('cids')
@@ -10,10 +12,10 @@ const { AbortController } = require('native-abort-controller')
 
 /**
  * @typedef {import('ipfs-utils/src/types').ProgressFn} IPFSUtilsHttpUploadProgressFn
- * @typedef {import('ipfs-core-types/src/root').AddProgressFn} IPFSCoreAddProgressFn
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').AddProgressFn} IPFSCoreAddProgressFn
  * @typedef {import('./types').HTTPClientExtraOptions} HTTPClientExtraOptions
- * @typedef {import('ipfs-core-types/src/root').API<HTTPClientExtraOptions>} RootAPI
- * @typedef {import('ipfs-core-types/src/root').AddResult} AddResult
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').API<HTTPClientExtraOptions>} RootAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').AddResult} AddResult
  */
 
 module.exports = configure((api) => {
