@@ -1,5 +1,5 @@
 {
-  "name": "ipfs-core",
+  "name": "@chris.troutner/ipfs-core",
   "version": "0.8.0",
   "description": "JavaScript implementation of the IPFS specification",
   "keywords": [
@@ -72,8 +72,8 @@
     "interface-datastore": "^4.0.0",
     "ipfs-bitswap": "^5.0.3",
     "ipfs-block-service": "^0.19.0",
-    "ipfs-core-types": "^0.5.2",
-    "ipfs-core-utils": "^0.8.3",
+    "@chris.troutner/ipfs-core-types": "^0.5.2",
+    "@chris.troutner/ipfs-core-utils": "^0.8.3",
     "ipfs-repo": "^9.1.6",
     "ipfs-unixfs": "^4.0.3",
     "ipfs-unixfs-exporter": "^5.0.3",

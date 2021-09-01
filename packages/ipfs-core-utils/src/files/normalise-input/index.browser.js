@@ -4,8 +4,8 @@ const normaliseContent = require('./normalise-content.browser')
 const normaliseInput = require('./normalise-input')
 
 /**
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
- * @typedef {import('ipfs-core-types/src/utils').BrowserImportCandidate} BrowserImportCandidate
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').BrowserImportCandidate} BrowserImportCandidate
  */
 
 /**

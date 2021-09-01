@@ -1,5 +1,5 @@
 {
-  "name": "ipfs-grpc-protocol",
+  "name": "@chris.troutner/ipfs-grpc-protocol",
   "version": "0.3.0",
   "description": "Protobuf definitions for the IPFS gRPC API",
   "keywords": [
