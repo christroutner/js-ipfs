@@ -22,7 +22,7 @@ module.exports = {
    */
   async handler ({ ctx: { ipfs, print }, topic, timeout }) {
     /**
-     * @type {import('ipfs-core-types/src/pubsub').MessageHandlerFn}
+     * @type {import('@chris.troutner/ipfs-core-types/src/pubsub').MessageHandlerFn}
      */
     const handler = msg => print(msg.data.toString())
     await ipfs.pubsub.subscribe(topic, handler, {

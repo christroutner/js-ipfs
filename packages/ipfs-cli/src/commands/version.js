@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const os = require('os')
@@ -61,8 +62,8 @@ module.exports = {
       print(parsedVersion)
     } else if (all) {
       print(`js-ipfs version: ${parsedVersion}`)
-      print(`interface-ipfs-core version: ${data['interface-ipfs-core']}`)
-      print(`ipfs-http-client version: ${data['ipfs-http-client']}`)
+      print(`interface-ipfs-core version: ${data['@chris.troutner/interface-ipfs-core']}`)
+      print(`ipfs-http-client version: ${data['@chris.troutner/ipfs-http-client']}`)
       print(`Repo version: ${data.repo}`)
       print(`System version: ${os.arch()}/${os.platform()}`)
       print(`Node.js version: ${process.version}`)

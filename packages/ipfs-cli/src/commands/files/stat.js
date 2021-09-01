@@ -3,8 +3,8 @@
 const {
   asBoolean
 } = require('../../utils')
-const formatMode = require('ipfs-core-utils/src/files/format-mode')
-const formatMtime = require('ipfs-core-utils/src/files/format-mtime')
+const formatMode = require('@chris.troutner/ipfs-core-utils/src/files/format-mode')
+const formatMtime = require('@chris.troutner/ipfs-core-utils/src/files/format-mtime')
 const { default: parseDuration } = require('parse-duration')
 
 module.exports = {

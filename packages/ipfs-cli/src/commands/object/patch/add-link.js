@@ -3,7 +3,7 @@
 const dagPB = require('ipld-dag-pb')
 const DAGLink = dagPB.DAGLink
 const multibase = require('multibase')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const { default: parseDuration } = require('parse-duration')
 const { coerceCID } = require('../../../utils')
 

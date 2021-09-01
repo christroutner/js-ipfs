@@ -1,9 +1,9 @@
 'use strict'
 
 const { default: parseDuration } = require('parse-duration')
-const toCidAndPath = require('ipfs-core-utils/src/to-cid-and-path')
+const toCidAndPath = require('@chris.troutner/ipfs-core-utils/src/to-cid-and-path')
 const uint8ArrayToString = require('uint8arrays/to-string')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const {
   stripControlCharacters,
   makeEntriesPrintable,

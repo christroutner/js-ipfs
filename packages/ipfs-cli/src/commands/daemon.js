@@ -82,7 +82,7 @@ module.exports = {
     }
 
     // Required inline to reduce startup time
-    const Daemon = require('ipfs-daemon')
+    const Daemon = require('@chris.troutner/ipfs-daemon')
     const daemon = new Daemon({
       config,
       silent: argv.silent,

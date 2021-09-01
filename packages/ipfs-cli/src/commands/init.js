@@ -82,7 +82,7 @@ module.exports = {
     print(`initializing ipfs node at ${repoPath}`)
 
     // Required inline to reduce startup time
-    const IPFS = require('ipfs-core')
+    const IPFS = require('@chris.troutner/ipfs-core')
     const Repo = require('ipfs-repo')
 
     try {

@@ -1,7 +1,7 @@
 'use strict'
 
 const multibase = require('multibase')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const { default: parseDuration } = require('parse-duration')
 
 module.exports = {

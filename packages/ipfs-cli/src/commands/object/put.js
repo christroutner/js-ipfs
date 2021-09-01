@@ -3,7 +3,7 @@
 const fs = require('fs')
 const concat = require('it-concat')
 const multibase = require('multibase')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const { default: parseDuration } = require('parse-duration')
 
 module.exports = {
@@ -31,7 +31,7 @@ module.exports = {
    * @param {object} argv
    * @param {import('../../types').Context} argv.ctx
    * @param {string} argv.data
-   * @param {import('ipfs-core-types/src/object').PutEncoding} argv.inputEnc
+   * @param {import('@chris.troutner/ipfs-core-types/src/object').PutEncoding} argv.inputEnc
    * @param {import('multibase').BaseName} argv.cidBase
    * @param {number} argv.timeout
    */

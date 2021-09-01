@@ -4,8 +4,8 @@ const {
   asBoolean,
   stripControlCharacters
 } = require('../../utils')
-const formatMode = require('ipfs-core-utils/src/files/format-mode')
-const formatMtime = require('ipfs-core-utils/src/files/format-mtime')
+const formatMode = require('@chris.troutner/ipfs-core-utils/src/files/format-mode')
+const formatMtime = require('@chris.troutner/ipfs-core-utils/src/files/format-mtime')
 const { default: parseDuration } = require('parse-duration')
 
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
     timeout
   }) {
     /**
-     * @param {import('ipfs-core-types/src/files').MFSEntry} file
+     * @param {import('@chris.troutner/ipfs-core-types/src/files').MFSEntry} file
      */
     const printListing = file => {
       const name = stripControlCharacters(file.name)

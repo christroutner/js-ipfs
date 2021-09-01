@@ -14,7 +14,7 @@ const {
   coerceMtimeNsecs,
   stripControlCharacters
 } = require('../utils')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const globSource = require('ipfs-utils/src/files/glob-source')
 const { default: parseDuration } = require('parse-duration')
 
@@ -241,7 +241,7 @@ module.exports = {
       fileImportConcurrency,
       blockWriteConcurrency,
       /**
-       * @type {import('ipfs-core-types/src/root').AddProgressFn}
+       * @type {import('@chris.troutner/ipfs-core-types/src/root').AddProgressFn}
        */
       progress: (bytes, name) => {},
       timeout

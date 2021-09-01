@@ -1,7 +1,7 @@
 'use strict'
 
 const multibase = require('multibase')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const { default: parseDuration } = require('parse-duration')
 const {
   makeEntriesPrintable
@@ -49,7 +49,7 @@ module.exports = {
    */
   async handler ({ ctx: { ipfs, print }, ipfsPath, type, quiet, cidBase, timeout }) {
     /**
-     * @param {import('ipfs-core-types/src/pin').LsResult} res
+     * @param {import('@chris.troutner/ipfs-core-types/src/pin').LsResult} res
      */
     const printPin = res => {
       let line = cidToString(res.cid, { base: cidBase })

@@ -5,7 +5,7 @@
 const { expect } = require('aegir/utils/chai')
 const cli = require('./utils/cli')
 const sinon = require('sinon')
-const { profiles } = require('ipfs-core/src/components/config')
+const { profiles } = require('@chris.troutner/ipfs-core/src/components/config')
 
 describe('config', () => {
   let ipfs

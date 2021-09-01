@@ -7,10 +7,10 @@ const log = require('debug')('ipfs:cli:utils')
 const Progress = require('progress')
 // @ts-ignore no types
 const byteman = require('byteman')
-const IPFS = require('ipfs-core')
+const IPFS = require('@chris.troutner/ipfs-core')
 const CID = require('cids')
 const { Multiaddr } = require('multiaddr')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const uint8ArrayFromString = require('uint8arrays/from-string')
 
 const getRepoPath = () => {
@@ -145,7 +145,7 @@ async function getIpfs (argv) {
     endpoint = argv.api
   }
   // Required inline to reduce startup time
-  const { create } = require('ipfs-http-client')
+  const { create } = require('@chris.troutner/ipfs-http-client')
   return {
     isDaemon: true,
     ipfs: create({ url: endpoint }),

@@ -6,7 +6,7 @@ const dagCBOR = require('ipld-dag-cbor')
 const dagPB = require('ipld-dag-pb')
 const concat = require('it-concat')
 const CID = require('cids')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const { default: parseDuration } = require('parse-duration')
 
 /**
