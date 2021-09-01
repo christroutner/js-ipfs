@@ -1,16 +1,16 @@
 'use strict'
 
 const Client = require('./client')
-const { encodeCID, decodeCID } = require('ipfs-message-port-protocol/src/cid')
-const { encodeNode, decodeNode } = require('ipfs-message-port-protocol/src/dag')
+const { encodeCID, decodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
+const { encodeNode, decodeNode } = require('@chris.troutner/ipfs-message-port-protocol/src/dag')
 
 /**
  * @typedef {import('cids')} CID
- * @typedef {import('ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
- * @typedef {import('ipfs-message-port-server').DAGService} DagService
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
+ * @typedef {import('@chris.troutner/ipfs-message-port-server').DAGService} DagService
  * @typedef {import('./client').MessageTransport} MessageTransport
  * @typedef {import('./interface').MessagePortClientOptions} MessagePortClientOptions
- * @typedef {import('ipfs-core-types/src/dag').API<MessagePortClientOptions>} DAGAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/dag').API<MessagePortClientOptions>} DAGAPI
  */
 
 /**

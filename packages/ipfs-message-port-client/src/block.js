@@ -1,19 +1,19 @@
 'use strict'
 
 const Client = require('./client')
-const { encodeCID, decodeCID } = require('ipfs-message-port-protocol/src/cid')
-const { decodeError } = require('ipfs-message-port-protocol/src/error')
+const { encodeCID, decodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
+const { decodeError } = require('@chris.troutner/ipfs-message-port-protocol/src/error')
 const {
   encodeBlock,
   decodeBlock
-} = require('ipfs-message-port-protocol/src/block')
+} = require('@chris.troutner/ipfs-message-port-protocol/src/block')
 const CID = require('cids')
 
 /**
  * @typedef {import('./client').MessageTransport} MessageTransport
- * @typedef {import('ipfs-message-port-server').BlockService} BlockService
+ * @typedef {import('@chris.troutner/ipfs-message-port-server').BlockService} BlockService
  * @typedef {import('./interface').MessagePortClientOptions} MessagePortClientOptions
- * @typedef {import('ipfs-core-types/src/block').API<MessagePortClientOptions>} BlockAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/block').API<MessagePortClientOptions>} BlockAPI
  */
 
 /**
@@ -87,7 +87,7 @@ BlockClient.prototype.stat = async function stat (cid, options = {}) {
 }
 
 /**
- * @param {import('ipfs-message-port-protocol/src/block').EncodedRmResult} entry
+ * @param {import('@chris.troutner/ipfs-message-port-protocol/src/block').EncodedRmResult} entry
  */
 const decodeRmEntry = entry => {
   const cid = decodeCID(entry.cid)

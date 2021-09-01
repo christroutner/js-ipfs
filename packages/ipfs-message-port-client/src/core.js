@@ -4,12 +4,12 @@
 
 const Client = require('./client')
 const CID = require('cids')
-const { encodeCID, decodeCID } = require('ipfs-message-port-protocol/src/cid')
+const { encodeCID, decodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
 const {
   decodeIterable,
   encodeIterable,
   encodeCallback
-} = require('ipfs-message-port-protocol/src/core')
+} = require('@chris.troutner/ipfs-message-port-protocol/src/core')
 /** @type {<T>(stream:ReadableStream<T>) => AsyncIterable<T>} */
 // @ts-ignore - browser-stream-to-it has no types
 const iterateReadableStream = require('browser-readablestream-to-it')
@@ -20,30 +20,30 @@ const {
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/core').RemoteIterable<T>} RemoteIterable
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/core').RemoteIterable<T>} RemoteIterable
  */
 
 /**
- * @typedef {import('ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedAddInput} EncodedAddInput
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedAddAllInput} EncodedAddAllInput
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedAddResult} EncodedAddResult
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedIPFSEntry} EncodedIPFSEntry
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedFileInput} EncodedFileInput
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedFileContent} EncodedFileContent
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedDirectoryInput} EncodedDirectoryInput
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedAddInput} EncodedAddInput
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedAddAllInput} EncodedAddAllInput
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedAddResult} EncodedAddResult
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedIPFSEntry} EncodedIPFSEntry
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedFileInput} EncodedFileInput
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedFileContent} EncodedFileContent
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedDirectoryInput} EncodedDirectoryInput
  *
- * @typedef {import('ipfs-message-port-server').CoreService} CoreService
+ * @typedef {import('@chris.troutner/ipfs-message-port-server').CoreService} CoreService
  *
  * @typedef {import('./client').MessageTransport} MessageTransport
  * @typedef {import('./interface').MessagePortClientOptions} MessagePortClientOptions
- * @typedef {import('ipfs-core-types/src/root').API<MessagePortClientOptions>} RootAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').API<MessagePortClientOptions>} RootAPI
  *
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
- * @typedef {import('ipfs-core-types/src/utils').ToFile} ToFile
- * @typedef {import('ipfs-core-types/src/utils').ToDirectory} ToDirectory
- * @typedef {import('ipfs-core-types/src/utils').ToContent} ToContent
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ToFile} ToFile
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ToDirectory} ToDirectory
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ToContent} ToContent
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
  */
 
 /**
@@ -143,7 +143,7 @@ CoreClient.prototype.ls = async function * ls (inputPath, options = {}) {
  * Decodes values yield by `ipfs.add`.
  *
  * @param {EncodedAddResult} data
- * @returns {import('ipfs-core-types/src/root').AddResult}
+ * @returns {import('@chris.troutner/ipfs-core-types/src/root').AddResult}
  */
 const decodeAddedData = ({ path, cid, mode, mtime, size }) => {
   return {
@@ -157,7 +157,7 @@ const decodeAddedData = ({ path, cid, mode, mtime, size }) => {
 
 /**
  * @param {EncodedIPFSEntry} encodedEntry
- * @returns {import('ipfs-core-types/src/root').IPFSEntry}
+ * @returns {import('@chris.troutner/ipfs-core-types/src/root').IPFSEntry}
  */
 const decodeLsEntry = ({ depth, name, path, size, cid, type, mode, mtime }) => ({
   cid: decodeCID(cid),

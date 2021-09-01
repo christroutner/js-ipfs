@@ -1,14 +1,14 @@
 {
   "name": "@chris.troutner/ipfs-message-port-client",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "IPFS client library for accessing IPFS node over message port",
   "keywords": [
     "ipfs",
     "message-port",
     "worker"
   ],
-  "homepage": "https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-message-port-client#readme",
-  "bugs": "https://github.com/ipfs/js-ipfs/issues",
+  "homepage": "https://github.com/christroutner/js-ipfs/tree/master/packages/ipfs-message-port-client#readme",
+  "bugs": "https://github.com/christroutner/js-ipfs/issues",
   "license": "(Apache-2.0 OR MIT)",
   "leadMaintainer": "Alex Potsides <alex@achingbrain.net>",
   "files": [
@@ -21,7 +21,7 @@
   "browser": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ipfs/js-ipfs.git"
+    "url": "git+https://github.com/christroutner/js-ipfs.git"
   },
   "scripts": {
     "build": "aegir build",
@@ -36,14 +36,14 @@
     "browser-readablestream-to-it": "^1.0.1",
     "cids": "^1.1.6",
     "@chris.troutner/ipfs-core-types": "^0.5.2",
-    "@chris.troutner/ipfs-message-port-protocol": "^0.7.3",
+    "@chris.troutner/ipfs-message-port-protocol": "^0.7.4",
     "ipfs-unixfs": "^4.0.3"
   },
   "devDependencies": {
     "aegir": "^33.0.0",
-    "@chris.troutner/interface-ipfs-core": "^0.147.0",
-    "@chris.troutner/ipfs-core": "^0.8.0",
-    "@chris.troutner/ipfs-message-port-server": "^0.7.3",
+    "@chris.troutner/interface-ipfs-core": "^0.147.1",
+    "@chris.troutner/ipfs-core": "^0.8.1",
+    "@chris.troutner/ipfs-message-port-server": "^0.7.4",
     "rimraf": "^3.0.2"
   },
   "engines": {

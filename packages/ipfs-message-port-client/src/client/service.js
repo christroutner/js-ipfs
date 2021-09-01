@@ -37,5 +37,5 @@ module.exports = class Service {
  */
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').ProcedureNames<T>} ProcedureNames
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').ProcedureNames<T>} ProcedureNames
  */

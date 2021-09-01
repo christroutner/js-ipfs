@@ -1,7 +1,7 @@
 // @ts-nocheck
 'use strict'
 
-const { decodeError } = require('ipfs-message-port-protocol/src/error')
+const { decodeError } = require('@chris.troutner/ipfs-message-port-protocol/src/error')
 const { DisconnectError, TimeoutError, AbortError } = require('./error')
 
 /**

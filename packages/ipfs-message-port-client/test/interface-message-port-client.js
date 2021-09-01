@@ -1,10 +1,10 @@
 /* eslint-env mocha, browser */
 'use strict'
 
-const tests = require('interface-ipfs-core')
+const tests = require('@chris.troutner/interface-ipfs-core')
 const { activate } = require('./util/client')
 
-describe('interface-ipfs-core tests', () => {
+describe('@chris.troutner/interface-ipfs-core tests', () => {
   const factory = {
     spawn () {
       return { api: activate() }

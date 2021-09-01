@@ -1,7 +1,7 @@
 'use strict'
 
-const IPFS = require('ipfs-core')
-const { IPFSService, Server } = require('ipfs-message-port-server')
+const IPFS = require('@chris.troutner/ipfs-core')
+const { IPFSService, Server } = require('@chris.troutner/ipfs-message-port-server')
 
 const main = async connections => {
   const ipfs = await IPFS.create({ offline: true, start: false })

@@ -2,15 +2,15 @@
 
 /* eslint-env browser */
 const Client = require('./client')
-const { decodeCID } = require('ipfs-message-port-protocol/src/cid')
+const { decodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
 const CID = require('cids')
 
 /**
- * @typedef {import('ipfs-message-port-server').FilesService} FilesService
- * @typedef {import('ipfs-message-port-protocol/src/files').EncodedStat} EncodedStat
+ * @typedef {import('@chris.troutner/ipfs-message-port-server').FilesService} FilesService
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/files').EncodedStat} EncodedStat
  * @typedef {import('./client').MessageTransport} MessageTransport
  * @typedef {import('./interface').MessagePortClientOptions} MessagePortClientOptions
- * @typedef {import('ipfs-core-types/src/files').API<MessagePortClientOptions>} FilesAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/files').API<MessagePortClientOptions>} FilesAPI
  */
 
 /**
