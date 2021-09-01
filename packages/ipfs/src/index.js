@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * @typedef {import('ipfs-core/src/components')} IPFS
+ * @typedef {import('@chris.troutner/ipfs-core/src/components')} IPFS
  */
 
-module.exports = { ...require('ipfs-core') }
+module.exports = { ...require('@chris.troutner/ipfs-core') }

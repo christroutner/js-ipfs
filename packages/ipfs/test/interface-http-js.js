@@ -1,14 +1,14 @@
 /* eslint-env mocha */
 'use strict'
 
-const tests = require('interface-ipfs-core')
+const tests = require('@chris.troutner/interface-ipfs-core')
 const { isNode, isBrowser, isWebWorker } = require('ipfs-utils/src/env')
 const factory = require('./utils/factory')
 const isFirefox = globalThis.navigator?.userAgent?.toLowerCase().includes('firefox')
 
 /** @typedef { import("ipfsd-ctl").ControllerOptions } ControllerOptions */
 
-describe('interface-ipfs-core over ipfs-http-client tests against js-ipfs', function () {
+describe('@chris.troutner/interface-ipfs-core over ipfs-http-client tests against js-ipfs', function () {
   this.timeout(20000)
 
   const commonFactory = factory({

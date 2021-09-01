@@ -48,11 +48,11 @@ if (!pkg.version.includes('-rc')) {
   updateNotifier({ pkg, updateCheckInterval: oneWeek }).notify()
 }
 
-const { NotEnabledError } = require('ipfs-core/src/errors')
+const { NotEnabledError } = require('@chris.troutner/ipfs-core/src/errors')
 // @ts-ignore - TODO: refactor this so it does not require deep requires
-const { print, getIpfs, getRepoPath } = require('ipfs-cli/src/utils')
+const { print, getIpfs, getRepoPath } = require('@chris.troutner/ipfs-cli/src/utils')
 const debug = require('debug')('ipfs:cli')
-const cli = require('ipfs-cli')
+const cli = require('@chris.troutner/ipfs-cli')
 
 /**
  * @param {string[]} argv

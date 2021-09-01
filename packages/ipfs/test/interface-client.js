@@ -1,14 +1,14 @@
 /* eslint-env mocha, browser */
 'use strict'
 
-const tests = require('interface-ipfs-core')
+const tests = require('@chris.troutner/interface-ipfs-core')
 const { isNode } = require('ipfs-utils/src/env')
 const factory = require('./utils/factory')
 
 describe('interface-ipfs-core ipfs-client tests', () => {
   const commonFactory = factory({
     type: 'js',
-    ipfsClientModule: require('ipfs-client')
+    ipfsClientModule: require('@chris.troutner/ipfs-client')
   })
 
   tests.files(commonFactory, {

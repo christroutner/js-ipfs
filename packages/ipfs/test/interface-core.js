@@ -1,13 +1,13 @@
 /* eslint-env mocha, browser */
 'use strict'
 
-const tests = require('interface-ipfs-core')
+const tests = require('@chris.troutner/interface-ipfs-core')
 const { isNode } = require('ipfs-utils/src/env')
 const factory = require('./utils/factory')
 
 /** @typedef { import("ipfsd-ctl").ControllerOptions } ControllerOptions */
 
-describe('interface-ipfs-core tests', function () {
+describe('@chris.troutner/interface-ipfs-core tests', function () {
   const commonFactory = factory()
 
   tests.root(commonFactory, {

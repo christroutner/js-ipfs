@@ -1,14 +1,14 @@
 /* eslint-env mocha */
 'use strict'
 
-const tests = require('interface-ipfs-core')
+const tests = require('@chris.troutner/interface-ipfs-core')
 const factory = require('./utils/factory')
 const isWindows = globalThis.process && globalThis.process.platform && globalThis.process.platform === 'win32'
 const isFirefox = globalThis.navigator?.userAgent?.toLowerCase().includes('firefox')
 
 /** @typedef {import("ipfsd-ctl").ControllerOptions} ControllerOptions */
 
-describe('interface-ipfs-core over ipfs-http-client tests against go-ipfs', () => {
+describe('@chris.troutner/interface-ipfs-core over ipfs-http-client tests against go-ipfs', () => {
   const commonFactory = factory({
     type: 'go'
   })
@@ -505,7 +505,7 @@ describe('interface-ipfs-core over ipfs-http-client tests against go-ipfs', () =
   tests.miscellaneous(commonFactory, {
     skip: [
       {
-        name: 'should include the interface-ipfs-core version',
+        name: 'should include the @chris.troutner/interface-ipfs-core version',
         reason: 'TODO not implemented in go-ipfs yet'
       },
       {
@@ -637,11 +637,11 @@ describe('interface-ipfs-core over ipfs-http-client tests against go-ipfs', () =
     skip: isWindows
       ? [{
           name: 'should send/receive 100 messages',
-          reason: 'FIXME https://github.com/ipfs/interface-ipfs-core/pull/188#issuecomment-354673246 and https://github.com/ipfs/go-ipfs/issues/4778'
+          reason: 'FIXME https://github.com/ipfs/@chris.troutner/interface-ipfs-core/pull/188#issuecomment-354673246 and https://github.com/ipfs/go-ipfs/issues/4778'
         },
         {
           name: 'should receive multiple messages',
-          reason: 'FIXME https://github.com/ipfs/interface-ipfs-core/pull/188#issuecomment-354673246 and https://github.com/ipfs/go-ipfs/issues/4778'
+          reason: 'FIXME https://github.com/ipfs/@chris.troutner/interface-ipfs-core/pull/188#issuecomment-354673246 and https://github.com/ipfs/go-ipfs/issues/4778'
         }]
       : null
   })
