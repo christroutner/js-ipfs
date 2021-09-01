@@ -1,15 +1,15 @@
 'use strict'
 
-const { encodeCID, decodeCID } = require('ipfs-message-port-protocol/src/cid')
-const { decodeNode, encodeNode } = require('ipfs-message-port-protocol/src/dag')
+const { encodeCID, decodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
+const { decodeNode, encodeNode } = require('@chris.troutner/ipfs-message-port-protocol/src/dag')
 const collect = require('it-all')
 
 /**
- * @typedef {import('ipfs-core-types').IPFS} IPFS
+ * @typedef {import('@chris.troutner/ipfs-core-types').IPFS} IPFS
  * @typedef {import('cids')} CID
- * @typedef {import('ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
- * @typedef {import('ipfs-message-port-protocol/src/dag').EncodedDAGNode} EncodedDAGNode
- * @typedef {import('ipfs-core-types/src/dag').PutOptions} PutOptions
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/dag').EncodedDAGNode} EncodedDAGNode
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/dag').PutOptions} PutOptions
  */
 
 exports.DAGService = class DAGService {

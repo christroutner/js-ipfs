@@ -2,50 +2,50 @@
 
 /* eslint-env browser */
 
-const { encodeError } = require('ipfs-message-port-protocol/src/error')
+const { encodeError } = require('@chris.troutner/ipfs-message-port-protocol/src/error')
 
 /**
- * @typedef {import('ipfs-message-port-protocol/src/data').EncodedError} EncodedError
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/data').EncodedError} EncodedError
  */
 
 /**
  * @template X, T
- * @typedef {import('ipfs-message-port-protocol/src/data').Result<X, T>} Result
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/data').Result<X, T>} Result
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').ProcedureNames<T>} ProcedureNames
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').ProcedureNames<T>} ProcedureNames
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').Method<T>} Method
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').Method<T>} Method
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').Namespace<T>} Namespace
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').Namespace<T>} Namespace
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').ServiceQuery<T>} ServiceQuery
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').ServiceQuery<T>} ServiceQuery
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').RPCQuery<T>} RPCQuery
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').RPCQuery<T>} RPCQuery
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').Inn<T>} Inn
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').Inn<T>} Inn
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').Out<T>} Out
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').Out<T>} Out
  */
 
 /**
@@ -81,7 +81,7 @@ const { encodeError } = require('ipfs-message-port-protocol/src/error')
 
 /**
  * @template T, K
- * @typedef {import('ipfs-message-port-protocol/src/rpc').NamespacedQuery<T, K>} NamespacedQuery
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').NamespacedQuery<T, K>} NamespacedQuery
  */
 
 /**
@@ -122,7 +122,7 @@ exports.Query = Query
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/rpc').MultiService<T>} MultiService
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/rpc').MultiService<T>} MultiService
  */
 
 /**

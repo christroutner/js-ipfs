@@ -2,12 +2,12 @@
 
 /* eslint-env browser */
 
-const { encodeCID } = require('ipfs-message-port-protocol/src/cid')
+const { encodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
 
 /**
- * @typedef {import('ipfs-core-types').IPFS} IPFS
- * @typedef {import('ipfs-core-types/src/files').StatOptions} StatOptions
- * @typedef {import('ipfs-message-port-protocol/src/files').EncodedStat} EncodedStat
+ * @typedef {import('@chris.troutner/ipfs-core-types').IPFS} IPFS
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/files').StatOptions} StatOptions
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/files').EncodedStat} EncodedStat
  */
 
 exports.FilesService = class FilesService {

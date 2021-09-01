@@ -1,22 +1,22 @@
 'use strict'
 
 const collect = require('it-all')
-const { encodeError } = require('ipfs-message-port-protocol/src/error')
-const { decodeCID, encodeCID } = require('ipfs-message-port-protocol/src/cid')
+const { encodeError } = require('@chris.troutner/ipfs-message-port-protocol/src/error')
+const { decodeCID, encodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
 const {
   decodeBlock,
   encodeBlock
-} = require('ipfs-message-port-protocol/src/block')
+} = require('@chris.troutner/ipfs-message-port-protocol/src/block')
 
 /**
- * @typedef {import('ipfs-core-types').IPFS} IPFS
+ * @typedef {import('@chris.troutner/ipfs-core-types').IPFS} IPFS
  * @typedef {import('cids')} CID
- * @typedef {import('ipfs-message-port-protocol/src/error').EncodedError} EncodedError
- * @typedef {import('ipfs-message-port-protocol/src/block').Block} Block
- * @typedef {import('ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
- * @typedef {import('ipfs-message-port-protocol/src/block').EncodedBlock} EncodedBlock
- * @typedef {import('ipfs-message-port-protocol/src/block').EncodedRmResult} EncodedRmResult
- * @typedef {import('ipfs-core-types/src/block').PutOptions} PutOptions
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/error').EncodedError} EncodedError
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/block').Block} Block
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/block').EncodedBlock} EncodedBlock
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/block').EncodedRmResult} EncodedRmResult
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/block').PutOptions} PutOptions
  */
 
 exports.BlockService = class BlockService {

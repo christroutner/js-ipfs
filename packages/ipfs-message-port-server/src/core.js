@@ -6,32 +6,32 @@ const {
   decodeIterable,
   encodeIterable,
   decodeCallback
-} = require('ipfs-message-port-protocol/src/core')
-const { decodeCID, encodeCID } = require('ipfs-message-port-protocol/src/cid')
+} = require('@chris.troutner/ipfs-message-port-protocol/src/core')
+const { decodeCID, encodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
 
 /**
  * @typedef {import('cids').CIDVersion} CIDVersion
- * @typedef {import('ipfs-core-types').IPFS} IPFS
- * @typedef {import('ipfs-core-types/src/root').AddOptions} AddOptions
- * @typedef {import('ipfs-core-types/src/root').AddAllOptions} AddAllOptions
- * @typedef {import('ipfs-core-types/src/root').IPFSEntry} IPFSEntry
- * @typedef {import('ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
- * @typedef {import('ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
- * @typedef {import('ipfs-core-types/src/root').AddResult} AddResult
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedAddInput} EncodedAddInput
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedAddAllInput} EncodedAddAllInput
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedFileContent} EncodedFileContent
- * @typedef {import('ipfs-message-port-protocol/src/root').EncodedIPFSEntry} EncodedIPFSEntry
+ * @typedef {import('@chris.troutner/ipfs-core-types').IPFS} IPFS
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').AddOptions} AddOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').AddAllOptions} AddAllOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').IPFSEntry} IPFSEntry
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/cid').EncodedCID} EncodedCID
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidateStream} ImportCandidateStream
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidate} ImportCandidate
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/root').AddResult} AddResult
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedAddInput} EncodedAddInput
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedAddAllInput} EncodedAddAllInput
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedFileContent} EncodedFileContent
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/root').EncodedIPFSEntry} EncodedIPFSEntry
  */
 
 /**
- * @typedef {import('ipfs-message-port-protocol/src/core').RemoteCallback} RemoteCallback
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/core').RemoteCallback} RemoteCallback
  */
 
 /**
  * @template T
- * @typedef {import('ipfs-message-port-protocol/src/core').RemoteIterable<T>} RemoteIterable
+ * @typedef {import('@chris.troutner/ipfs-message-port-protocol/src/core').RemoteIterable<T>} RemoteIterable
  */
 
 /**
@@ -80,7 +80,7 @@ exports.CoreService = class CoreService {
 
     if (progressCallback) {
       const fn = decodeCallback(progressCallback)
-      /** @type {import('ipfs-core-types/src/root').AddProgressFn} */
+      /** @type {import('@chris.troutner/ipfs-core-types/src/root').AddProgressFn} */
       progress = (bytes, fileName) => { fn([bytes, fileName]) }
     }
 
@@ -128,7 +128,7 @@ exports.CoreService = class CoreService {
 
     if (progressCallback) {
       const fn = decodeCallback(progressCallback)
-      /** @type {import('ipfs-core-types/src/root').AddProgressFn} */
+      /** @type {import('@chris.troutner/ipfs-core-types/src/root').AddProgressFn} */
       progress = (bytes, fileName) => { fn([bytes, fileName]) }
     }
 

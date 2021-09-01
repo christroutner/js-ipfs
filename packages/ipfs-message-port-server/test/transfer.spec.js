@@ -1,7 +1,7 @@
 'use strict'
 
 /* eslint-env mocha */
-const { encodeCID } = require('ipfs-message-port-protocol/src/cid')
+const { encodeCID } = require('@chris.troutner/ipfs-message-port-protocol/src/cid')
 
 const CID = require('cids')
 const { Server } = require('../src/server')
