@@ -260,5 +260,11 @@
     "Jacob Karlsson <jacob.karlsson95@gmail.com>",
     "Jorropo <jorropo.pgm@gmail.com>",
     "Holodisc <holodiscent@gmail.com>"
-  ]
+  ],
+  "dependencies": {
+    "aegir": "^35.0.3",
+    "buffer": "^6.0.3",
+    "multiaddr": "^10.0.1",
+    "process": "^0.11.10"
+  }
 }

@@ -3,7 +3,7 @@
 const cp = require('./cp')
 const rm = require('./rm')
 const mergeOptions = require('merge-options').bind({ ignoreUndefined: true })
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('multihashes').HashName} HashName
@@ -35,7 +35,7 @@ const defaultOptions = {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["mv"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["mv"]}
    */
   async function mfsMv (from, to, options = {}) {
     /** @type {DefaultOptions} */

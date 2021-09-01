@@ -13,7 +13,7 @@ const Service = require('../utils/service')
  */
 module.exports = ({ network, preload, blockService, ipns, repo, mfsPreload }) => {
   /**
-   * @type {import('ipfs-core-types/src/root').API["stop"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["stop"]}
    */
   const stop = async () => {
     blockService.unsetExchange()

@@ -13,7 +13,7 @@ const log = Object.assign(debug('ipfs:name:resolve'), {
 })
 
 const { OFFLINE_ERROR } = require('../../utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  *
@@ -30,15 +30,15 @@ const appendRemainder = (result, remainder) =>
  * IPNS - Inter-Planetary Naming System
  *
  * @param {Object} config
- * @param {import('ipfs-core-types/src/root').API["dns"]} config.dns
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').API["dns"]} config.dns
  * @param {import('../ipns')} config.ipns
  * @param {import('peer-id')} config.peerId
- * @param {import('ipfs-core-types/src/root').API["isOnline"]} config.isOnline
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').API["isOnline"]} config.isOnline
  * @param {import('../../types').Options} config.options
  */
 module.exports = ({ dns, ipns, peerId, isOnline, options: { offline } }) => {
   /**
-   * @type {import('ipfs-core-types/src/name').API["resolve"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/name').API["resolve"]}
    */
   async function * resolve (name, options = {}) { // eslint-disable-line require-await
     options = mergeOptions({

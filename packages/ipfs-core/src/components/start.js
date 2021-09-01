@@ -17,7 +17,7 @@ const Service = require('../utils/service')
  */
 module.exports = ({ network, preload, peerId, keychain, repo, ipns, blockService, mfsPreload, print, options }) => {
   /**
-   * @type {import('ipfs-core-types/src/root').API["start"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["start"]}
    */
   const start = async () => {
     const { bitswap, libp2p } = await Service.start(network, {

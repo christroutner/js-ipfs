@@ -1,6 +1,6 @@
 'use strict'
 
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -8,7 +8,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ network }) => {
   /**
-   * @type {import('ipfs-core-types/src/swarm').API["peers"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/swarm').API["peers"]}
    */
   async function peers (options = {}) {
     const { libp2p } = await network.use(options)
@@ -16,7 +16,7 @@ module.exports = ({ network }) => {
 
     for (const [peerId, connections] of libp2p.connections) {
       for (const connection of connections) {
-        /** @type {import('ipfs-core-types/src/swarm').PeersResult} */
+        /** @type {import('@chris.troutner/ipfs-core-types/src/swarm').PeersResult} */
         const peer = {
           addr: connection.remoteAddr,
           peer: peerId

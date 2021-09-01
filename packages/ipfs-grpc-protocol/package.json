@@ -6,8 +6,8 @@
     "ipfs"
   ],
   "main": "dist/ipfs.json",
-  "homepage": "https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-grpc-protocol#readme",
-  "bugs": "https://github.com/ipfs/js-ipfs/issues",
+  "homepage": "https://github.com/christroutner/js-ipfs/tree/master/packages/ipfs-grpc-protocol#readme",
+  "bugs": "https://github.com/christroutner/js-ipfs/issues",
   "license": "(Apache-2.0 OR MIT)",
   "leadMaintainer": "Alex Potsides <alex@achingbrain.net>",
   "files": [
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ipfs/js-ipfs.git"
+    "url": "git+https://github.com/christroutner/js-ipfs.git"
   },
   "scripts": {
     "test": "echo 'No tests here'",

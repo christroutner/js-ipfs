@@ -1,6 +1,6 @@
 'use strict'
 
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const first = require('it-first')
 const last = require('it-last')
 
@@ -11,7 +11,7 @@ const last = require('it-last')
  */
 module.exports = ({ ipld, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/dag').API["get"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/dag').API["get"]}
    */
   const get = async function get (cid, options = {}) {
     if (options.preload !== false) {
@@ -22,7 +22,7 @@ module.exports = ({ ipld, preload }) => {
       const entry = options.localResolve
         ? await first(ipld.resolve(cid, options.path))
         : await last(ipld.resolve(cid, options.path))
-      /** @type {import('ipfs-core-types/src/dag').GetResult} - first and last will return undefined when empty */
+      /** @type {import('@chris.troutner/ipfs-core-types/src/dag').GetResult} - first and last will return undefined when empty */
       const result = (entry)
       return result
     }

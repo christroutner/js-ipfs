@@ -3,7 +3,7 @@
 const { callbackify } = require('util')
 
 /**
- * @param {import('ipfs-core-types').IPFS} ipfs
+ * @param {import('@chris.troutner/ipfs-core-types').IPFS} ipfs
  * @param {import('../types').Options} options
  */
 module.exports = function grpcId (ipfs, options = {}) {

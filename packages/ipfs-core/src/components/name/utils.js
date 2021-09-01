@@ -1,7 +1,7 @@
 'use strict'
 
 const isIPFS = require('is-ipfs')
-const toCidAndPath = require('ipfs-core-utils/src/to-cid-and-path')
+const toCidAndPath = require('@chris.troutner/ipfs-core-utils/src/to-cid-and-path')
 const drain = require('it-drain')
 
 /**

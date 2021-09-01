@@ -5,7 +5,7 @@ const CID = require('cids')
 const errCode = require('err-code')
 const { NotEnabledError } = require('../errors')
 const get = require('dlv')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -15,7 +15,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
 module.exports = ({ network, repo }) => {
   const { get, put, findProvs, findPeer, provide, query } = {
     /**
-     * @type {import('ipfs-core-types/src/dht').API["get"]}
+     * @type {import('@chris.troutner/ipfs-core-types/src/dht').API["get"]}
      */
     async get (key, options = {}) {
       const { libp2p } = await use(network, options)
@@ -23,7 +23,7 @@ module.exports = ({ network, repo }) => {
     },
 
     /**
-     * @type {import('ipfs-core-types/src/dht').API["put"]}
+     * @type {import('@chris.troutner/ipfs-core-types/src/dht').API["put"]}
      */
     async * put (key, value, options) {
       const { libp2p } = await use(network, options)
@@ -31,7 +31,7 @@ module.exports = ({ network, repo }) => {
     },
 
     /**
-     * @type {import('ipfs-core-types/src/dht').API["findProvs"]}
+     * @type {import('@chris.troutner/ipfs-core-types/src/dht').API["findProvs"]}
      */
     async * findProvs (cid, options = { numProviders: 20 }) {
       const { libp2p } = await use(network, options)
@@ -48,7 +48,7 @@ module.exports = ({ network, repo }) => {
     },
 
     /**
-     * @type {import('ipfs-core-types/src/dht').API["findPeer"]}
+     * @type {import('@chris.troutner/ipfs-core-types/src/dht').API["findPeer"]}
      */
     async findPeer (peerId, options) {
       const { libp2p } = await use(network, options)
@@ -61,7 +61,7 @@ module.exports = ({ network, repo }) => {
     },
 
     /**
-     * @type {import('ipfs-core-types/src/dht').API["provide"]}
+     * @type {import('@chris.troutner/ipfs-core-types/src/dht').API["provide"]}
      */
     async * provide (cids, options = { recursive: false }) {
       const { libp2p } = await use(network, options)
@@ -96,7 +96,7 @@ module.exports = ({ network, repo }) => {
     },
 
     /**
-     * @type {import('ipfs-core-types/src/dht').API["query"]}
+     * @type {import('@chris.troutner/ipfs-core-types/src/dht').API["query"]}
      */
     async * query (peerId, options) {
       const { libp2p } = await use(network, options)
@@ -148,7 +148,7 @@ const normalizeCID = cid =>
 
 /**
  * @param {import('../types').NetworkService} network
- * @param {import('ipfs-core-types/src/utils').AbortOptions} [options]
+ * @param {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} [options]
  */
 const use = async (network, options) => {
   const net = await network.use(options)

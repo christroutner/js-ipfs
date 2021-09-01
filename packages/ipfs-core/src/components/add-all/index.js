@@ -1,10 +1,10 @@
 'use strict'
 
 const { importer } = require('ipfs-unixfs-importer')
-const normaliseAddInput = require('ipfs-core-utils/src/files/normalise-input/index')
+const normaliseAddInput = require('@chris.troutner/ipfs-core-utils/src/files/normalise-input/index')
 const { parseChunkerString } = require('./utils')
 const { pipe } = require('it-pipe')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const mergeOptions = require('merge-options').bind({ ignoreUndefined: true })
 
 /**
@@ -14,11 +14,11 @@ const mergeOptions = require('merge-options').bind({ ignoreUndefined: true })
 
 /**
  * @typedef {Object} Context
- * @property {import('ipfs-core-types/src/block').API} block
+ * @property {import('@chris.troutner/ipfs-core-types/src/block').API} block
  * @property {import('../gc-lock').GCLock} gcLock
  * @property {import('../../types').Preload} preload
- * @property {import('ipfs-core-types/src/pin').API} pin
- * @property {import('ipfs-core-types/src/root').ShardingOptions} [options]
+ * @property {import('@chris.troutner/ipfs-core-types/src/pin').API} pin
+ * @property {import('@chris.troutner/ipfs-core-types/src/root').ShardingOptions} [options]
  *
  * @param {Context} context
  */
@@ -26,7 +26,7 @@ module.exports = ({ block, gcLock, preload, pin, options }) => {
   const isShardingEnabled = options && options.sharding
 
   /**
-   * @type {import('ipfs-core-types/src/root').API["addAll"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["addAll"]}
    */
   async function * addAll (source, options = {}) {
     const opts = mergeOptions({
@@ -117,7 +117,7 @@ module.exports = ({ block, gcLock, preload, pin, options }) => {
 }
 
 /**
- * @param {import('ipfs-core-types/src/root').AddAllOptions} opts
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').AddAllOptions} opts
  */
 function transformFile (opts) {
   /**
@@ -152,7 +152,7 @@ function transformFile (opts) {
 
 /**
  * @param {(cid: CID) => void} preload
- * @param {import('ipfs-core-types/src/root').AddAllOptions} opts
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').AddAllOptions} opts
  */
 function preloadFile (preload, opts) {
   /**
@@ -178,8 +178,8 @@ function preloadFile (preload, opts) {
 }
 
 /**
- * @param {import('ipfs-core-types/src/pin').API} pin
- * @param {import('ipfs-core-types/src/root').AddAllOptions} opts
+ * @param {import('@chris.troutner/ipfs-core-types/src/pin').API} pin
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').AddAllOptions} opts
  */
 function pinFile (pin, opts) {
   /**

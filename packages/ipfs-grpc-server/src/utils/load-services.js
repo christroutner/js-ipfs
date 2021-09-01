@@ -1,7 +1,7 @@
 'use strict'
 
 // @ts-ignore
-const protocol = require('ipfs-grpc-protocol')
+const protocol = require('@chris.troutner/ipfs-grpc-protocol')
 const protobuf = require('protobufjs/light')
 const { Service } = protobuf
 

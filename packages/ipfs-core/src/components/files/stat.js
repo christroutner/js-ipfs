@@ -5,7 +5,7 @@ const toMfsPath = require('./utils/to-mfs-path')
 const { exporter } = require('ipfs-unixfs-exporter')
 const log = require('debug')('ipfs:mfs:stat')
 const errCode = require('err-code')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('./').MfsContext} MfsContext
@@ -23,7 +23,7 @@ const defaultOptions = {
 }
 
 /**
- * @typedef {import('ipfs-core-types/src/files').StatResult} StatResult
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/files').StatResult} StatResult
  */
 
 /**
@@ -31,7 +31,7 @@ const defaultOptions = {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["stat"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["stat"]}
    */
   async function mfsStat (path, options = {}) {
     /** @type {DefaultOptions} */

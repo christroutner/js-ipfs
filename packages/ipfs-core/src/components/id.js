@@ -2,7 +2,7 @@
 
 const pkgversion = require('../../package.json').version
 const { Multiaddr } = require('multiaddr')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const uint8ArrayToString = require('uint8arrays/to-string')
 const PeerId = require('peer-id')
 const { NotStartedError } = require('../errors')
@@ -14,7 +14,7 @@ const { NotStartedError } = require('../errors')
  */
 module.exports = ({ peerId, network }) => {
   /**
-   * @type {import('ipfs-core-types/src/root').API["id"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["id"]}
    */
   async function id (options = {}) { // eslint-disable-line require-await
     if (options.peerId === peerId.toB58String()) {

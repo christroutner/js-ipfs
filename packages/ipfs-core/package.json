@@ -1,6 +1,6 @@
 {
   "name": "@chris.troutner/ipfs-core",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "JavaScript implementation of the IPFS specification",
   "keywords": [
     "IPFS"
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ipfs/js-ipfs.git"
+    "url": "git+https://github.com/christroutner/js-ipfs.git"
   },
   "scripts": {
     "build": "aegir build",
@@ -73,7 +73,7 @@
     "ipfs-bitswap": "^5.0.3",
     "ipfs-block-service": "^0.19.0",
     "@chris.troutner/ipfs-core-types": "^0.5.2",
-    "@chris.troutner/ipfs-core-utils": "^0.8.3",
+    "@chris.troutner/ipfs-core-utils": "^0.8.4",
     "ipfs-repo": "^9.1.6",
     "ipfs-unixfs": "^4.0.3",
     "ipfs-unixfs-exporter": "^5.0.3",
@@ -127,7 +127,7 @@
     "aegir": "^33.0.0",
     "delay": "^5.0.0",
     "go-ipfs": "0.8.0",
-    "interface-ipfs-core": "^0.147.0",
+    "@chris.troutner/interface-ipfs-core": "^0.147.1",
     "ipfsd-ctl": "^8.0.1",
     "ipld-git": "^0.6.1",
     "iso-url": "^1.0.0",

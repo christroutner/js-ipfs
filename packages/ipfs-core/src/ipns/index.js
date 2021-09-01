@@ -21,7 +21,7 @@ const uint8ArrayToString = require('uint8arrays/to-string')
 
 class IPNS {
   /**
-   * @param {import('ipfs-core-types/src/utils').BufferStore} routing
+   * @param {import('@chris.troutner/ipfs-core-types/src/utils').BufferStore} routing
    * @param {import('interface-datastore').Datastore} datastore
    * @param {PeerId} peerId
    * @param {import('libp2p/src/keychain')} keychain

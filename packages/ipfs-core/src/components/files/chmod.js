@@ -20,7 +20,7 @@ const cp = require('./cp')
 const rm = require('./rm')
 // @ts-ignore - TODO: refactor this so it does not require a deep require
 const persist = require('ipfs-unixfs-importer/src/utils/persist')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('multihashes').HashName} HashName
@@ -214,7 +214,7 @@ function calculateMode (mode, metadata) {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["chmod"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["chmod"]}
    */
   async function mfsChmod (path, mode, options = {}) {
     /** @type {DefaultOptions} */

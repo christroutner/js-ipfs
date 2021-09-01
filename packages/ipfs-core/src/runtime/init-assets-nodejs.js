@@ -8,7 +8,7 @@ const all = require('it-all')
  * Add the default assets to the repo.
  *
  * @param {object} arg
- * @param {import('ipfs-core-types/src/root').API["addAll"]} arg.addAll
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').API["addAll"]} arg.addAll
  * @param {(msg: string) => void} arg.print
  */
 module.exports = async function initAssets ({ addAll, print }) {

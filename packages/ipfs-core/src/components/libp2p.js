@@ -15,7 +15,7 @@ const pkgversion = require('../../package.json').version
  * @typedef {import('../types').Options} IPFSOptions
  * @typedef {import('libp2p')} LibP2P
  * @typedef {import('libp2p').Libp2pOptions & import('libp2p').CreateOptions} Libp2pOptions
- * @typedef {import('ipfs-core-types/src/config').Config} IPFSConfig
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/config').Config} IPFSConfig
  * @typedef {import('multiaddr').Multiaddr} Multiaddr
  */
 

@@ -4,8 +4,8 @@ const CID = require('cids')
 const { DAGNode } = require('ipld-dag-pb')
 const { Errors } = require('interface-datastore')
 const ERR_NOT_FOUND = Errors.notFoundError().code
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
-const toCIDAndPath = require('ipfs-core-utils/src/to-cid-and-path')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
+const toCIDAndPath = require('@chris.troutner/ipfs-core-utils/src/to-cid-and-path')
 
 const Format = {
   default: '<dst>',
@@ -26,12 +26,12 @@ const Format = {
 /**
  * @param {Object} config
  * @param {import('ipld')} config.ipld
- * @param {import('ipfs-core-types/src/root').API["resolve"]} config.resolve
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').API["resolve"]} config.resolve
  * @param {import('../../types').Preload} config.preload
  */
 module.exports = function ({ ipld, resolve, preload }) {
   /**
-   * @type {import('ipfs-core-types/src/refs').API["refs"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/refs').API["refs"]}
    */
   async function * refs (ipfsPath, options = {}) {
     if (options.maxDepth === 0) {
@@ -66,7 +66,7 @@ module.exports.Format = Format
 /**
  * @param {import('../../types').Preload} preload
  * @param {string | CID} ipfsPath
- * @param {import('ipfs-core-types/src/refs').RefsOptions} options
+ * @param {import('@chris.troutner/ipfs-core-types/src/refs').RefsOptions} options
  */
 function getFullPath (preload, ipfsPath, options) {
   const {
@@ -84,10 +84,10 @@ function getFullPath (preload, ipfsPath, options) {
 /**
  * Get a stream of refs at the given path
  *
- * @param {import('ipfs-core-types/src/root').API["resolve"]} resolve
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').API["resolve"]} resolve
  * @param {import('ipld')} ipld
  * @param {string} path
- * @param {import('ipfs-core-types/src/refs').RefsOptions} options
+ * @param {import('@chris.troutner/ipfs-core-types/src/refs').RefsOptions} options
  */
 async function * refsStream (resolve, ipld, path, options) {
   // Resolve to the target CID of the path

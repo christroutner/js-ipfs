@@ -20,18 +20,18 @@ const nameToCodec = name => multicodec.getCodeFromName(name)
  * @param {HashName} name
  */
 const nameToHashCode = name => multihashes.names[name]
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
  * @param {import('ipld')} config.ipld
- * @param {import('ipfs-core-types/src/pin').API} config.pin
+ * @param {import('@chris.troutner/ipfs-core-types/src/pin').API} config.pin
  * @param {import('../../types').Preload} config.preload
  * @param {import('.').GCLock} config.gcLock
  */
 module.exports = ({ ipld, pin, gcLock, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/dag').API["put"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/dag').API["put"]}
    */
   async function put (dagNode, options = {}) {
     const { cidVersion, format, hashAlg } = readEncodingOptions(options)
@@ -67,7 +67,7 @@ module.exports = ({ ipld, pin, gcLock, preload }) => {
 }
 
 /**
- * @param {import('ipfs-core-types/src/dag').PutOptions} options
+ * @param {import('@chris.troutner/ipfs-core-types/src/dag').PutOptions} options
  */
 const readEncodingOptions = (options) => {
   if (options.cid && (options.format || options.hashAlg)) {

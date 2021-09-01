@@ -16,14 +16,14 @@ const errCode = require('err-code')
  * @property {Print} options.print
  * @property {IPFSOptions} options.options
  *
- * @typedef {import('ipfs-core-types/src/config').Config} IPFSConfig
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/config').Config} IPFSConfig
  * @typedef {import('../types').Options} IPFSOptions
  * @typedef {import('ipfs-repo')} Repo
  * @typedef {import('../types').Print} Print
  * @typedef {import('libp2p')} libp2p
  * @typedef {import('ipfs-bitswap')} Bitswap
  * @typedef {import('peer-id')} PeerId
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
  */
 
 class Network {

@@ -6,7 +6,7 @@ const { parallelMap, filter } = require('streaming-iterables')
 const { pipe } = require('it-pipe')
 const { PinTypes } = require('../pin/pin-manager')
 const { cleanCid } = require('./utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 const BLOCK_RM_CONCURRENCY = 8
 
@@ -18,7 +18,7 @@ const BLOCK_RM_CONCURRENCY = 8
  */
 module.exports = ({ blockService, gcLock, pinManager }) => {
   /**
-   * @type {import('ipfs-core-types/src/block').API["rm"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/block').API["rm"]}
    */
   async function * rm (cids, options = {}) {
     if (!Array.isArray(cids)) {
@@ -35,7 +35,7 @@ module.exports = ({ blockService, gcLock, pinManager }) => {
         parallelMap(BLOCK_RM_CONCURRENCY, async cid => {
           cid = cleanCid(cid)
 
-          /** @type {import('ipfs-core-types/src/block').RmResult} */
+          /** @type {import('@chris.troutner/ipfs-core-types/src/block').RmResult} */
           const result = { cid }
 
           try {

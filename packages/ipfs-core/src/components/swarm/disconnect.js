@@ -1,6 +1,6 @@
 'use strict'
 
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -8,7 +8,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ network }) => {
   /**
-   * @type {import('ipfs-core-types/src/swarm').API["disconnect"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/swarm').API["disconnect"]}
    */
   async function disconnect (addr, options = {}) {
     const { libp2p } = await network.use(options)

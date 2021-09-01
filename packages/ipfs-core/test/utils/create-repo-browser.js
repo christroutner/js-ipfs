@@ -14,7 +14,7 @@ const idb = self.indexedDB ||
  * @param {string} [options.path]
  * @param {number} [options.version]
  * @param {number} [options.spec]
- * @param {import('ipfs-core-types/src/config').Config} [options.config]
+ * @param {import('@chris.troutner/ipfs-core-types/src/config').Config} [options.config]
  */
 module.exports = async function createTempRepo (options = {}) {
   options.path = options.path || `ipfs-${nanoid()}`

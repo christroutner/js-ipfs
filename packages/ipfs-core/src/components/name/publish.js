@@ -12,7 +12,7 @@ const log = Object.assign(debug('ipfs:name:publish'), {
 })
 
 const { OFFLINE_ERROR, normalizePath } = require('../../utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const { resolvePath } = require('./utils')
 
 /**
@@ -22,7 +22,7 @@ const { resolvePath } = require('./utils')
  * @param {import('../ipns')} config.ipns
  * @param {import('ipld')} config.ipld
  * @param {import('peer-id')} config.peerId
- * @param {import('ipfs-core-types/src/root').API["isOnline"]} config.isOnline
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').API["isOnline"]} config.isOnline
  * @param {import('libp2p/src/keychain')} config.keychain
  */
 module.exports = ({ ipns, ipld, peerId, isOnline, keychain }) => {
@@ -46,7 +46,7 @@ module.exports = ({ ipns, ipld, peerId, isOnline, keychain }) => {
   }
 
   /**
-   * @type {import('ipfs-core-types/src/name').API["publish"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/name').API["publish"]}
    */
   async function publish (value, options = {}) {
     const resolve = !(options.resolve === false)

@@ -3,7 +3,7 @@
 const CID = require('cids')
 const log = require('debug')('ipfs:repo:gc')
 const { MFS_ROOT_KEY } = require('../../utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const { Errors } = require('interface-datastore')
 const ERR_NOT_FOUND = Errors.notFoundError().code
 const { parallelMerge, transform, map } = require('streaming-iterables')
@@ -13,8 +13,8 @@ const multibase = require('multibase')
 const BLOCK_RM_CONCURRENCY = 256
 
 /**
- * @typedef {import('ipfs-core-types/src/pin').API} PinAPI
- * @typedef {import('ipfs-core-types/src/refs').API} RefsAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').API} PinAPI
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/refs').API} RefsAPI
  * @typedef {import('ipfs-repo')} IPFSRepo
  * @typedef {import('interface-datastore').Key} Key
  * @typedef {import('ipld-block')} Block
@@ -31,7 +31,7 @@ const BLOCK_RM_CONCURRENCY = 256
  */
 module.exports = ({ gcLock, pin, refs, repo }) => {
   /**
-   * @type {import('ipfs-core-types/src/repo').API["gc"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/repo').API["gc"]}
    */
   async function * gc (_options = {}) {
     const start = Date.now()

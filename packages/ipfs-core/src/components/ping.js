@@ -3,7 +3,7 @@
 const PeerId = require('peer-id')
 /** @type {{success:true, time:0, text: ''}} */
 const basePacket = { success: true, time: 0, text: '' }
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -11,7 +11,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ network }) => {
   /**
-   * @type {import('ipfs-core-types/src/root').API["ping"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["ping"]}
    */
   async function * ping (peerId, options = {}) {
     const { libp2p } = await network.use()
@@ -84,5 +84,5 @@ module.exports = ({ network }) => {
  * @typedef {Object} PingSettings
  * @property {number} [count=10] - The number of ping messages to send
  *
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
  */

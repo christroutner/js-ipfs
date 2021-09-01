@@ -10,7 +10,7 @@ const addLink = require('./utils/add-link')
 const toMfsPath = require('./utils/to-mfs-path')
 const mergeOptions = require('merge-options').bind({ ignoreUndefined: true })
 const toTrail = require('./utils/to-trail')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('ipld-dag-pb').DAGNode} DAGNode
@@ -47,7 +47,7 @@ const defaultOptions = {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["cp"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["cp"]}
    */
   async function mfsCp (from, to, opts = {}) {
     /** @type {DefaultOptions} */

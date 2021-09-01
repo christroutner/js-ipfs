@@ -1,7 +1,7 @@
 'use strict'
 
 const stat = require('./stat')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const mergeOptions = require('merge-options').bind({ ignoreUndefined: true })
 
 /**
@@ -21,7 +21,7 @@ const defaultOptions = {}
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["flush"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["flush"]}
    */
   async function mfsFlush (path, options = {}) {
     /** @type {DefaultOptions} */

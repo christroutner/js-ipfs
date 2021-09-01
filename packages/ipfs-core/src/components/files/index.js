@@ -7,7 +7,7 @@ const isIpfs = require('is-ipfs')
  * @typedef {object} MfsContext
  * @property {import('ipld')} ipld
  * @property {import('ipfs-repo')} repo
- * @property {import('ipfs-core-types/src/block').API} block
+ * @property {import('@chris.troutner/ipfs-core-types/src/block').API} block
  */
 
 /**
@@ -115,12 +115,12 @@ function createMfs (options) {
 /**
  * @param {object} context
  * @param {import('ipld')} context.ipld
- * @param {import('ipfs-core-types/src/block').API} context.block
+ * @param {import('@chris.troutner/ipfs-core-types/src/block').API} context.block
  * @param {import('ipfs-block-service')} context.blockService
  * @param {import('ipfs-repo')} context.repo
  * @param {import('../../types').Preload} context.preload
  * @param {import('..').Options} context.options
- * @returns {import('ipfs-core-types/src/files').API}
+ * @returns {import('@chris.troutner/ipfs-core-types/src/files').API}
  */
 module.exports = ({ ipld, block, blockService, repo, preload, options: constructorOptions }) => {
   const methods = createMfs({

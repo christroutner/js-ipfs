@@ -2,7 +2,7 @@
 
 // dns-nodejs gets replaced by dns-browser when bundled
 const dns = require('../runtime/dns-nodejs')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {string} domain
@@ -19,7 +19,7 @@ function fqdnFixups (domain) {
 
 module.exports = () => {
   /**
-   * @type {import('ipfs-core-types/src/root').API["dns"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["dns"]}
    */
   const resolveDNS = async (domain, options = { recursive: true }) => { // eslint-disable-line require-await
     if (typeof domain !== 'string') {

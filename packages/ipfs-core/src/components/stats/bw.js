@@ -2,7 +2,7 @@
 
 const { default: parseDuration } = require('parse-duration')
 const errCode = require('err-code')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {Object} BWOptions
@@ -20,7 +20,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  * @typedef {import('libp2p')} libp2p
  * @typedef {import('peer-id')} PeerId
  * @typedef {import('cids')} CID
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
  */
 
 /**
@@ -66,7 +66,7 @@ function getBandwidthStats (libp2p, opts) {
  */
 module.exports = ({ network }) => {
   /**
-   * @type {import('ipfs-core-types/src/stats').API["bw"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/stats').API["bw"]}
    */
   const bw = async function * (options = {}) {
     const { libp2p } = await network.use(options)

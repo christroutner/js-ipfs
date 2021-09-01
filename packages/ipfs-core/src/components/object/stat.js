@@ -1,7 +1,7 @@
 'use strict'
 
 const dagPB = require('ipld-dag-pb')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -12,7 +12,7 @@ module.exports = ({ ipld, preload }) => {
   const get = require('./get')({ ipld, preload })
 
   /**
-   * @type {import('ipfs-core-types/src/object').API["stat"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/object').API["stat"]}
    */
   async function stat (multihash, options = {}) {
     const node = await get(multihash, options)

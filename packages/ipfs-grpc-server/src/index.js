@@ -12,7 +12,7 @@ const {
 } = loadServices()
 
 /**
- * @param {import('ipfs-core-types').IPFS} ipfs
+ * @param {import('@chris.troutner/ipfs-core-types').IPFS} ipfs
  * @param {import('./types').Options} options
  */
 module.exports = async function createServer (ipfs, options = {}) {

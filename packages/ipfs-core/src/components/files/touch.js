@@ -12,7 +12,7 @@ const updateMfsRoot = require('./utils/update-mfs-root')
 const { DAGNode } = require('ipld-dag-pb')
 const mc = require('multicodec')
 const mh = require('multihashing-async').multihash
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('multihashes').HashName} HashName
@@ -44,7 +44,7 @@ const defaultOptions = {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["touch"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["touch"]}
    */
   async function mfsTouch (path, options = {}) {
     /** @type {DefaultOptions} */

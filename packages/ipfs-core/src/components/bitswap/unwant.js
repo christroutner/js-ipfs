@@ -2,7 +2,7 @@
 
 const CID = require('cids')
 const errCode = require('err-code')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -10,7 +10,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ network }) => {
   /**
-   * @type {import('ipfs-core-types/src/bitswap').API["unwant"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/bitswap').API["unwant"]}
    */
   async function unwant (cids, options = {}) {
     const { bitswap } = await network.use(options)

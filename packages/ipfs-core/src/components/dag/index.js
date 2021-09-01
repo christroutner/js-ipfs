@@ -12,9 +12,9 @@ const createPut = require('./put')
  *
  * @typedef {import('ipld')} IPLD
  * @typedef {import('../../types').Preload} Preload
- * @typedef {import('ipfs-core-types/src/pin').API} Pin
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').API} Pin
  * @typedef {import('../gc-lock').GCLock} GCLock
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
  */
 
 class DagAPI {

@@ -1,7 +1,7 @@
 'use strict'
 
 const defaultConfig = require('../../runtime/config-nodejs.js')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const { Multiaddr } = require('multiaddr')
 
 /**
@@ -10,10 +10,10 @@ const { Multiaddr } = require('multiaddr')
  */
 module.exports = ({ repo }) => {
   /**
-   * @type {import('ipfs-core-types/src/bootstrap').API["reset"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/bootstrap').API["reset"]}
    */
   async function reset (options = {}) {
-    /** @type {import('ipfs-core-types/src/config').Config} */
+    /** @type {import('@chris.troutner/ipfs-core-types/src/config').Config} */
     // @ts-ignore repo returns type unknown
     const config = await repo.config.getAll(options)
     config.Bootstrap = defaultConfig().Bootstrap

@@ -6,7 +6,7 @@ const {
 const multicodec = require('multicodec')
 const mh = require('multihashing-async').multihash
 const { UnixFS } = require('ipfs-unixfs')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -15,7 +15,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ ipld, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/object').API["new"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/object').API["new"]}
    */
   async function _new (options = {}) {
     let data

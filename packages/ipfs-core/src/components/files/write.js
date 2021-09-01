@@ -18,7 +18,7 @@ const {
   MFS_MAX_CHUNK_SIZE
 } = require('../../utils')
 const last = require('it-last')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const {
   parseMode,
   parseMtime
@@ -41,7 +41,7 @@ const {
  * @property {CIDVersion} cidVersion
  * @property {HashName} hashAlg
  * @property {boolean} parents
- * @property {import('ipfs-core-types/src/root').AddProgressFn} progress
+ * @property {import('@chris.troutner/ipfs-core-types/src/root').AddProgressFn} progress
  * @property {'trickle' | 'balanced'} strategy
  * @property {boolean} flush
  * @property {'raw' | 'file'} leafType
@@ -77,7 +77,7 @@ const defaultOptions = {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["write"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["write"]}
    */
   async function mfsWrite (path, content, opts = {}) {
     /** @type {DefaultOptions} */

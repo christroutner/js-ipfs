@@ -1,6 +1,6 @@
 'use strict'
 
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const { Multiaddr } = require('multiaddr')
 
 /**
@@ -9,7 +9,7 @@ const { Multiaddr } = require('multiaddr')
  */
 module.exports = ({ repo }) => {
   /**
-   * @type {import('ipfs-core-types/src/bootstrap').API["list"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/bootstrap').API["list"]}
    */
   async function list (options = {}) {
     /** @type {string[]|null} */

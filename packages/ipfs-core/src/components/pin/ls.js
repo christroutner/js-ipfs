@@ -3,9 +3,9 @@
 
 const PinManager = require('./pin-manager')
 const { PinTypes } = PinManager
-const normaliseInput = require('ipfs-core-utils/src/pins/normalise-input')
+const normaliseInput = require('@chris.troutner/ipfs-core-utils/src/pins/normalise-input')
 const { resolvePath } = require('../../utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('cids')} CID
@@ -17,7 +17,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  * @param {Record<string, any>} [metadata]
  */
 function toPin (type, cid, metadata) {
-  /** @type {import('ipfs-core-types/src/pin').LsResult} */
+  /** @type {import('@chris.troutner/ipfs-core-types/src/pin').LsResult} */
   const output = {
     type,
     cid
@@ -37,10 +37,10 @@ function toPin (type, cid, metadata) {
  */
 module.exports = ({ pinManager, ipld }) => {
   /**
-   * @type {import('ipfs-core-types/src/pin').API["ls"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/pin').API["ls"]}
    */
   async function * ls (options = {}) {
-    /** @type {import('ipfs-core-types/src/pin').PinQueryType} */
+    /** @type {import('@chris.troutner/ipfs-core-types/src/pin').PinQueryType} */
     let type = PinTypes.all
 
     if (options.type) {

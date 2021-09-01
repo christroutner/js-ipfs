@@ -17,7 +17,7 @@ const createLibP2P = require('./libp2p')
  * @typedef {import('../types').Options} IPFSOptions
  * @typedef {import('../types').InitOptions} InitOptions
  * @typedef {import('../types').Print} Print
- * @typedef {import('ipfs-core-types/src/config').Config} IPFSConfig
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/config').Config} IPFSConfig
  * @typedef {import('libp2p-crypto').KeyType} KeyType
  * @typedef {import('libp2p/src/keychain')} Keychain
  */

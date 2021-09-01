@@ -16,7 +16,7 @@ const defaultMaximumRecursiveDepth = 32
 
 class IpnsResolver {
   /**
-   * @param {import('ipfs-core-types/src/utils').BufferStore} routing
+   * @param {import('@chris.troutner/ipfs-core-types/src/utils').BufferStore} routing
    */
   constructor (routing) {
     this._routing = routing

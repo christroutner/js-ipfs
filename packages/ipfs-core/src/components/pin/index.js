@@ -27,7 +27,7 @@ class PinAPI {
     this.rm = createRm({ rmAll })
     this.ls = createLs({ ipld, pinManager })
 
-    /** @type {import('ipfs-core-types/src/pin/remote').API} */
+    /** @type {import('@chris.troutner/ipfs-core-types/src/pin/remote').API} */
     this.remote = {
       add: (cid, options = {}) => Promise.reject(new Error('Not implemented')),
       ls: async function * (query, options = {}) { return Promise.reject(new Error('Not implemented')) }, // eslint-disable-line require-yield

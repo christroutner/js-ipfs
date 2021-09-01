@@ -1,7 +1,7 @@
 'use strict'
 
 const { isValidMultiaddr } = require('./utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -9,14 +9,14 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ repo }) => {
   /**
-   * @type {import('ipfs-core-types/src/bootstrap').API["add"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/bootstrap').API["add"]}
    */
   async function add (multiaddr, options = {}) {
     if (!isValidMultiaddr(multiaddr)) {
       throw new Error(`${multiaddr} is not a valid Multiaddr`)
     }
 
-    /** @type {import('ipfs-core-types/src/config').Config} */
+    /** @type {import('@chris.troutner/ipfs-core-types/src/config').Config} */
     // @ts-ignore repo returns type unknown
     const config = await repo.config.getAll(options)
 

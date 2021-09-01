@@ -2,12 +2,12 @@
 
 const { exporter } = require('ipfs-unixfs-exporter')
 const toMfsPath = require('./utils/to-mfs-path')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const map = require('it-map')
 
 /**
  * @typedef {import('./').MfsContext} MfsContext
- * @typedef {import('ipfs-core-types/src/files').MFSEntry} MFSEntry
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/files').MFSEntry} MFSEntry
  */
 
 /**
@@ -35,7 +35,7 @@ const toOutput = (fsEntry) => {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["ls"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["ls"]}
    */
   async function * mfsLs (path, options = {}) {
     const mfsPath = await toMfsPath(context, path, options)

@@ -6,7 +6,7 @@ const updateMfsRoot = require('./utils/update-mfs-root')
 const removeLink = require('./utils/remove-link')
 const toMfsPath = require('./utils/to-mfs-path')
 const toTrail = require('./utils/to-trail')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const mergeOptions = require('merge-options').bind({ ignoreUndefined: true })
 
 /**
@@ -39,7 +39,7 @@ const defaultOptions = {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["rm"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["rm"]}
    */
   async function mfsRm (paths, opts = {}) {
     /** @type {DefaultOptions} */

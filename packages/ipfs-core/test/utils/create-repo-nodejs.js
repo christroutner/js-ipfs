@@ -12,7 +12,7 @@ const fs = require('fs').promises
  * @param {string} [options.path]
  * @param {number} [options.version]
  * @param {number} [options.spec]
- * @param {import('ipfs-core-types/src/config').Config} [options.config]
+ * @param {import('@chris.troutner/ipfs-core-types/src/config').Config} [options.config]
  */
 module.exports = async function createTempRepo (options = {}) {
   options.path = options.path || path.join(os.tmpdir(), '/ipfs-test-' + nanoid())

@@ -1,7 +1,7 @@
 'use strict'
 
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
-const toCidAndPath = require('ipfs-core-utils/src/to-cid-and-path')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
+const toCidAndPath = require('@chris.troutner/ipfs-core-utils/src/to-cid-and-path')
 
 /**
  * @param {Object} config
@@ -10,7 +10,7 @@ const toCidAndPath = require('ipfs-core-utils/src/to-cid-and-path')
  */
 module.exports = ({ ipld, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/dag').API["tree"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/dag').API["tree"]}
    */
   async function * tree (ipfsPath, options = {}) { // eslint-disable-line require-await
     const {

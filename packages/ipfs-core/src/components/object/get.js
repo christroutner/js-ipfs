@@ -2,7 +2,7 @@
 
 const CID = require('cids')
 const errCode = require('err-code')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('multibase').BaseName} BaseName
@@ -15,7 +15,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ ipld, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/object').API["get"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/object').API["get"]}
    */
   async function get (multihash, options = {}) { // eslint-disable-line require-await
     let cid

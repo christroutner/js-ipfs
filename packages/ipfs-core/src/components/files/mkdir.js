@@ -10,7 +10,7 @@ const updateTree = require('./utils/update-tree')
 const addLink = require('./utils/add-link')
 const withMfsRoot = require('./utils/with-mfs-root')
 const mergeOptions = require('merge-options').bind({ ignoreUndefined: true })
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('ipld-dag-pb').DAGNode} DAGNode
@@ -48,7 +48,7 @@ const defaultOptions = {
  */
 module.exports = (context) => {
   /**
-   * @type {import('ipfs-core-types/src/files').API["mkdir"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["mkdir"]}
    */
   async function mfsMkdir (path, options = {}) {
     /** @type {DefaultOptions} */

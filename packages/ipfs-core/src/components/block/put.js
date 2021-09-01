@@ -4,7 +4,7 @@ const Block = require('ipld-block')
 const multihashing = require('multihashing-async')
 const CID = require('cids')
 const isIPFS = require('is-ipfs')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @typedef {import('cids').CIDVersion} CIDVersion
@@ -13,13 +13,13 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
 /**
  * @param {Object} config
  * @param {import('ipfs-block-service')} config.blockService
- * @param {import('ipfs-core-types/src/pin').API} config.pin
+ * @param {import('@chris.troutner/ipfs-core-types/src/pin').API} config.pin
  * @param {import('.').GCLock} config.gcLock
  * @param {import('../../types').Preload} config.preload
  */
 module.exports = ({ blockService, pin, gcLock, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/block').API["put"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/block').API["put"]}
    */
   async function put (block, options = {}) {
     if (Array.isArray(block)) {

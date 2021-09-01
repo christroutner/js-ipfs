@@ -9,7 +9,7 @@ const createStat = require('./stat')
  * @typedef {import('../../types').Preload} Preload
  * @typedef {import('ipfs-block-service')} BlockService
  * @typedef {import('../gc-lock').GCLock} GCLock
- * @typedef {import('ipfs-core-types/src/pin').API} Pin
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').API} Pin
  * @typedef {import('../pin/pin-manager')} PinManager
  */
 

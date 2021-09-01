@@ -1,6 +1,6 @@
 import type { KeyType } from 'libp2p-crypto'
 import type PeerId from 'peer-id'
-import type { Config as IPFSConfig } from 'ipfs-core-types/src/config'
+import type { Config as IPFSConfig } from '@chris.troutner/ipfs-core-types/src/config'
 import type { Options as IPLDOptions } from 'ipld'
 import type Libp2p from 'libp2p'
 import type { Libp2pOptions } from 'libp2p'

@@ -4,7 +4,7 @@ const {
   DAGLink
 } = require('ipld-dag-pb')
 const CID = require('cids')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {any} node
@@ -47,7 +47,7 @@ function findLinks (node, links = []) {
  */
 module.exports = ({ ipld }) => {
   /**
-   * @type {import('ipfs-core-types/src/object').API["links"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/object').API["links"]}
    */
   async function links (multihash, options = {}) {
     const cid = new CID(multihash)

@@ -2,11 +2,11 @@
 
 const set = require('just-safe-set')
 const getDefaultConfig = require('../runtime/config-nodejs.js')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const log = require('debug')('ipfs:core:config')
 
 /**
- * @typedef {import('ipfs-core-types/src/config').Config} Config
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/config').Config} Config
  *
  * @typedef {object} Transformer
  * @property {string} description
@@ -30,7 +30,7 @@ module.exports = ({ repo }) => {
   }
 
   /**
-   * @type {import('ipfs-core-types/src/config').API["getAll"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/config').API["getAll"]}
    */
   async function getAll (options = {}) { // eslint-disable-line require-await
     // @ts-ignore TODO: move config typedefs into ipfs-repo
@@ -38,7 +38,7 @@ module.exports = ({ repo }) => {
   }
 
   /**
-   * @type {import('ipfs-core-types/src/config').API["get"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/config').API["get"]}
    */
   async function get (key, options) { // eslint-disable-line require-await
     if (!key) {
@@ -50,21 +50,21 @@ module.exports = ({ repo }) => {
   }
 
   /**
-   * @type {import('ipfs-core-types/src/config').API["set"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/config').API["set"]}
    */
   async function set (key, value, options) { // eslint-disable-line require-await
     return repo.config.set(key, value, options)
   }
 
   /**
-   * @type {import('ipfs-core-types/src/config').API["replace"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/config').API["replace"]}
    */
   async function replace (value, options) { // eslint-disable-line require-await
     return repo.config.replace(value, options)
   }
 
   /**
-   * @type {import('ipfs-core-types/src/config/profiles').API["apply"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/config/profiles').API["apply"]}
    */
   async function applyProfile (profileName, options = { dryRun: false }) {
     const { dryRun } = options
@@ -100,7 +100,7 @@ module.exports = ({ repo }) => {
 }
 
 /**
- * @type {import('ipfs-core-types/src/config/profiles').API["list"]}
+ * @type {import('@chris.troutner/ipfs-core-types/src/config/profiles').API["list"]}
  */
 async function listProfiles (_options) { // eslint-disable-line require-await
   return Object.keys(profiles).map(name => ({

@@ -5,13 +5,13 @@ const isIpfs = require('is-ipfs')
 const CID = require('cids')
 const Key = require('interface-datastore').Key
 const errCode = require('err-code')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 /** @type {typeof Object.assign} */
 const mergeOptions = require('merge-options')
 const resolve = require('./components/dag/resolve')
 
 /**
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
  */
 
 exports.mergeOptions = mergeOptions
@@ -42,7 +42,7 @@ const normalizePath = (pathStr) => {
 }
 
 // TODO: do we need both normalizePath and normalizeCidPath?
-// TODO: don't forget ipfs-core-utils/src/to-cid-and-path
+// TODO: don't forget @chris.troutner/ipfs-core-utils/src/to-cid-and-path
 /**
  * @param {Uint8Array|CID|string} path
  * @returns {string}
@@ -101,7 +101,7 @@ const mapFile = (file, options = {}) => {
     throw new Error(`Unknown node type '${file.type}'`)
   }
 
-  /** @type {import('ipfs-core-types/src/root').IPFSEntry} */
+  /** @type {import('@chris.troutner/ipfs-core-types/src/root').IPFSEntry} */
   const output = {
     cid: file.cid,
     path: file.path,

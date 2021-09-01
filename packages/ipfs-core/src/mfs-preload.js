@@ -1,7 +1,7 @@
 'use strict'
 
 const debug = require('debug')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const log = Object.assign(debug('ipfs:mfs-preload'), {
   error: debug('ipfs:mfs-preload:error')
 })
@@ -16,7 +16,7 @@ const log = Object.assign(debug('ipfs:mfs-preload'), {
 /**
  * @param {Object} config
  * @param {import('./types').Preload} config.preload
- * @param {import('ipfs-core-types/src/files').API} config.files
+ * @param {import('@chris.troutner/ipfs-core-types/src/files').API} config.files
  * @param {Options} [config.options]
  */
 module.exports = ({ preload, files, options = {} }) => {

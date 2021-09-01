@@ -4,13 +4,13 @@
 const { resolvePath } = require('../../utils')
 const PinManager = require('./pin-manager')
 const { PinTypes } = PinManager
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
-const normaliseInput = require('ipfs-core-utils/src/pins/normalise-input')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
+const normaliseInput = require('@chris.troutner/ipfs-core-utils/src/pins/normalise-input')
 
 /**
- * @typedef {import('ipfs-core-utils/src/pins/normalise-input').Source} Source
- * @typedef {import('ipfs-core-utils/src/pins/normalise-input').Pin} PinTarget
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-utils/src/pins/normalise-input').Source} Source
+ * @typedef {import('@chris.troutner/ipfs-core-utils/src/pins/normalise-input').Pin} PinTarget
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
  * @typedef {import('cids')} CID
  */
 
@@ -27,7 +27,7 @@ const normaliseInput = require('ipfs-core-utils/src/pins/normalise-input')
  */
 module.exports = ({ pinManager, gcLock, ipld }) => {
   /**
-   * @type {import('ipfs-core-types/src/pin').API["addAll"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/pin').API["addAll"]}
    */
   async function * addAll (source, options = {}) {
     /**

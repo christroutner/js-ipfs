@@ -2,7 +2,7 @@
 
 const { exporter } = require('ipfs-unixfs-exporter')
 const { normalizeCidPath } = require('../utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const CID = require('cids')
 
 /**
@@ -14,7 +14,7 @@ const CID = require('cids')
  */
 module.exports = function ({ ipld, preload }) {
   /**
-   * @type {import('ipfs-core-types/src/root').API["cat"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["cat"]}
    */
   async function * cat (ipfsPath, options = {}) {
     ipfsPath = normalizeCidPath(ipfsPath)

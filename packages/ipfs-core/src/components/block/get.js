@@ -1,7 +1,7 @@
 'use strict'
 
 const { cleanCid } = require('./utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -10,7 +10,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ blockService, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/block').API["get"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/block').API["get"]}
    */
   async function get (cid, options = {}) { // eslint-disable-line require-await
     cid = cleanCid(cid)

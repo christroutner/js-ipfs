@@ -1,6 +1,6 @@
 'use strict'
 
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -13,7 +13,7 @@ module.exports = ({ ipld, gcLock, preload }) => {
   const put = require('../put')({ ipld, gcLock, preload })
 
   /**
-   * @type {import('ipfs-core-types/src/object/patch').API["rmLink"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/object/patch').API["rmLink"]}
    */
   async function rmLink (multihash, linkRef, options = {}) {
     const node = await get(multihash, options)

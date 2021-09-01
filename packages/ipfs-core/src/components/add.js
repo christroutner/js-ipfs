@@ -4,11 +4,11 @@ const last = require('it-last')
 
 /**
  * @param {Object} context
- * @param {import('ipfs-core-types/src/root').API["addAll"]} context.addAll
+ * @param {import('@chris.troutner/ipfs-core-types/src/root').API["addAll"]} context.addAll
  */
 module.exports = ({ addAll }) => {
   /**
-   * @type {import('ipfs-core-types/src/root').API["add"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["add"]}
    */
   async function add (entry, options = {}) {
     // @ts-ignore TODO: https://github.com/ipfs/js-ipfs/issues/3290

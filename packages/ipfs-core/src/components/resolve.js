@@ -2,17 +2,17 @@
 
 const isIpfs = require('is-ipfs')
 const CID = require('cids')
-const { cidToString } = require('ipfs-core-utils/src/cid')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
  * @param {import('ipld')} config.ipld
- * @param {import('ipfs-core-types/src/name').API} config.name - An IPFS core interface name API
+ * @param {import('@chris.troutner/ipfs-core-types/src/name').API} config.name - An IPFS core interface name API
  */
 module.exports = ({ ipld, name }) => {
   /**
-   * @type {import('ipfs-core-types/src/root').API["resolve"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["resolve"]}
    */
   async function resolve (path, opts = {}) {
     if (!isIpfs.path(path)) {

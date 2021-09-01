@@ -23,15 +23,15 @@ const { Key } = require('interface-datastore')
  */
 
 /**
- * @typedef {import('ipfs-core-types/src/pin').PinType} PinType
- * @typedef {import('ipfs-core-types/src/pin').PinQueryType} PinQueryType
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').PinType} PinType
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/pin').PinQueryType} PinQueryType
  */
 
 /**
  * @typedef {Object} PinOptions
  * @property {any} [metadata]
  *
- * @typedef {import('ipfs-core-types/src/utils').AbortOptions} AbortOptions
+ * @typedef {import('@chris.troutner/ipfs-core-types/src/utils').AbortOptions} AbortOptions
  */
 
 // arbitrary limit to the number of concurrent dag operations

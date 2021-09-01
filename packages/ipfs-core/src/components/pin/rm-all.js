@@ -1,8 +1,8 @@
 'use strict'
 
-const normaliseInput = require('ipfs-core-utils/src/pins/normalise-input')
+const normaliseInput = require('@chris.troutner/ipfs-core-utils/src/pins/normalise-input')
 const { resolvePath } = require('../../utils')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const { PinTypes } = require('./pin-manager')
 
 /**
@@ -13,7 +13,7 @@ const { PinTypes } = require('./pin-manager')
  */
 module.exports = ({ pinManager, gcLock, ipld }) => {
   /**
-   * @type {import('ipfs-core-types/src/pin').API["rmAll"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/pin').API["rmAll"]}
    */
   async function * rmAll (source, _options = {}) {
     const release = await gcLock.readLock()

@@ -7,13 +7,13 @@ const {
 } = require('ipld-dag-pb')
 const mh = require('multihashing-async').multihash
 const multicodec = require('multicodec')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const uint8ArrayToString = require('uint8arrays/to-string')
 const uint8ArrayFromString = require('uint8arrays/from-string')
 
 /**
  * @param {Uint8Array} buf
- * @param {import('ipfs-core-types/src/object').PutEncoding} encoding
+ * @param {import('@chris.troutner/ipfs-core-types/src/object').PutEncoding} encoding
  */
 function parseBuffer (buf, encoding) {
   switch (encoding) {
@@ -72,7 +72,7 @@ function parseProtoBuffer (buf) {
  */
 module.exports = ({ ipld, gcLock, preload }) => {
   /**
-   * @type {import('ipfs-core-types/src/object').API["put"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/object').API["put"]}
    */
   async function put (obj, options = {}) {
     const encoding = options.enc

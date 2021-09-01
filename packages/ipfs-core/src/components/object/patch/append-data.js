@@ -1,7 +1,7 @@
 'use strict'
 
 const { DAGNode } = require('ipld-dag-pb')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 const uint8ArrayConcat = require('uint8arrays/concat')
 
 /**
@@ -15,7 +15,7 @@ module.exports = ({ ipld, gcLock, preload }) => {
   const put = require('../put')({ ipld, gcLock, preload })
 
   /**
-   * @type {import('ipfs-core-types/src/object/patch').API["appendData"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/object/patch').API["appendData"]}
    */
   async function appendData (multihash, data, options = {}) {
     const node = await get(multihash, options)

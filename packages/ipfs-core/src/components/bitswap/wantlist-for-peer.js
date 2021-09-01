@@ -1,7 +1,7 @@
 'use strict'
 
 const PeerId = require('peer-id')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {Object} config
@@ -9,7 +9,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = ({ network }) => {
   /**
-   * @type {import('ipfs-core-types/src/bitswap').API["wantlistForPeer"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/bitswap').API["wantlistForPeer"]}
    */
   async function wantlistForPeer (peerId, options = {}) {
     const { bitswap } = await network.use(options)

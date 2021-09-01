@@ -9,7 +9,7 @@ const CID = require('cids')
  */
 module.exports = ({ addAll }) =>
   /**
-   * @type {import('ipfs-core-types/src/pin').API["add"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/pin').API["add"]}
    */
   (path, options = {}) => {
     let iter
