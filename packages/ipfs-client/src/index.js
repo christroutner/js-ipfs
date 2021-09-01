@@ -1,12 +1,12 @@
 'use strict'
 
-const { create: httpClient } = require('ipfs-http-client')
-const { create: grpcClient } = require('ipfs-grpc-client')
+const { create: httpClient } = require('@chris.troutner/ipfs-http-client')
+const { create: grpcClient } = require('@chris.troutner/ipfs-grpc-client')
 const mergeOptions = require('merge-options')
 
 /**
- * @typedef {import('ipfs-http-client').Options} HTTPOptions
- * @typedef {import('ipfs-grpc-client').Options} GRPCOptions
+ * @typedef {import('@chris.troutner/ipfs-http-client').Options} HTTPOptions
+ * @typedef {import('@chris.troutner/ipfs-grpc-client').Options} GRPCOptions
  * @typedef {string|URL|import('multiaddr').Multiaddr} Address
  * @typedef {{http?: Address, grpc?: Address} & Partial<HTTPOptions & GRPCOptions>} Options
  *
