@@ -1,6 +1,6 @@
 'use strict'
 
-const toUrlString = require('ipfs-core-utils/src/to-url-string')
+const toUrlString = require('@chris.troutner/ipfs-core-utils/src/to-url-string')
 const loadServices = require('./utils/load-services')
 const { grpc } = require('@improbable-eng/grpc-web')
 

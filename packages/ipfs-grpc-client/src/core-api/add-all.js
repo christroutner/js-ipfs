@@ -1,9 +1,9 @@
 'use strict'
 
-const normaliseInput = require('ipfs-core-utils/src/files/normalise-input')
+const normaliseInput = require('@chris.troutner/ipfs-core-utils/src/files/normalise-input')
 const CID = require('cids')
 const bidiToDuplex = require('../utils/bidi-to-duplex')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {number} index
@@ -86,7 +86,7 @@ async function sendFile (index, sink, content, path, mode, mtime) {
 }
 
 /**
- * @param {import('ipfs-core-types/src/utils').ImportCandidateStream} stream
+ * @param {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidateStream} stream
  * @param {import('it-pushable').Pushable<any>} sink
  */
 async function sendFiles (stream, sink) {
@@ -113,7 +113,7 @@ async function sendFiles (stream, sink) {
  */
 module.exports = function grpcAddAll (grpc, service, opts) {
   /**
-   * @type {import('ipfs-core-types/src/root').API["addAll"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/root').API["addAll"]}
    */
   async function * addAll (stream, options = {}) {
     const {

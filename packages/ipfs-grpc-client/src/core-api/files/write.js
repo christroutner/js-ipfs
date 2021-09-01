@@ -1,8 +1,8 @@
 'use strict'
 
 const clientStreamToPromise = require('../../utils/client-stream-to-promise')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
-const normaliseContent = require('ipfs-core-utils/src/files/normalise-input/normalise-content')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
+const normaliseContent = require('@chris.troutner/ipfs-core-utils/src/files/normalise-input/normalise-content')
 const {
   parseMtime,
   parseMode
@@ -25,7 +25,7 @@ async function * stream (path, content) {
  */
 module.exports = function grpcMfsWrite (grpc, service, opts) {
   /**
-   * @type {import('ipfs-core-types/src/files').API["write"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["write"]}
    */
   async function mfsWrite (path, content, options = {}) {
     /**

@@ -2,7 +2,7 @@
 
 const pushable = require('it-pushable')
 const errCode = require('err-code')
-const toUrlString = require('ipfs-core-utils/src/to-url-string')
+const toUrlString = require('@chris.troutner/ipfs-core-utils/src/to-url-string')
 const toHeaders = require('./to-headers')
 const transport = require('../grpc/transport')
 

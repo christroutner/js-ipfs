@@ -2,7 +2,7 @@
 
 const CID = require('cids')
 const serverStreamToIterator = require('../../utils/server-stream-to-iterator')
-const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
+const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')
 
 /**
  * @param {import('@improbable-eng/grpc-web').grpc} grpc
@@ -11,7 +11,7 @@ const withTimeoutOption = require('ipfs-core-utils/src/with-timeout-option')
  */
 module.exports = function grpcMfsLs (grpc, service, opts) {
   /**
-   * @type {import('ipfs-core-types/src/files').API["ls"]}
+   * @type {import('@chris.troutner/ipfs-core-types/src/files').API["ls"]}
    */
   async function * mfsLs (path, options = {}) {
     const request = {

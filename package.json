@@ -264,6 +264,7 @@
   "dependencies": {
     "@types/debug": "^4.1.7",
     "@types/dlv": "^1.1.2",
+    "@types/ws": "^7.4.7",
     "aegir": "^35.0.3",
     "buffer": "^6.0.3",
     "debug": "^4.3.2",
