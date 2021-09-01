@@ -1,4 +1,4 @@
-import { IPFS } from 'ipfs-core-types'
+import { IPFS } from '@chris.troutner/ipfs-core-types'
 import { Request, Server } from '@hapi/hapi'
 import Multiaddr from 'multiaddrs'
 

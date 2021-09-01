@@ -15,7 +15,7 @@ const isIPFS = require('is-ipfs')
 // @ts-ignore no types
 const toStream = require('it-to-stream')
 const PathUtils = require('../utils/path')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 
 const log = Object.assign(debug('ipfs:http-gateway'), {
   error: debug('ipfs:http-gateway:error')

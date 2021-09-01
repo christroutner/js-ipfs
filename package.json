@@ -262,6 +262,7 @@
     "Holodisc <holodiscent@gmail.com>"
   ],
   "dependencies": {
+    "@types/debug": "^4.1.7",
     "aegir": "^35.0.3",
     "buffer": "^6.0.3",
     "debug": "^4.3.2",

@@ -9,7 +9,7 @@ const LOG = 'ipfs:http-gateway'
 const LOG_ERROR = 'ipfs:http-gateway:error'
 
 /**
- * @typedef {import('ipfs-core-types').IPFS} IPFS
+ * @typedef {import('@chris.troutner/ipfs-core-types').IPFS} IPFS
  * @typedef {import('./types').Server} Server
  */
 
