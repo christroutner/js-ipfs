@@ -10,17 +10,17 @@ const WebRTCStar = require('libp2p-webrtc-star')
 const DelegatedPeerRouter = require('libp2p-delegated-peer-routing')
 // @ts-ignore - no types
 const DelegatedContentRouter = require('libp2p-delegated-content-routing')
-const { create: ipfsHttpClient } = require('ipfs-http-client')
-const IPFS = require('ipfs-core')
-const HttpApi = require('ipfs-http-server')
-const HttpGateway = require('ipfs-http-gateway')
-const gRPCServer = require('ipfs-grpc-server')
-const createRepo = require('ipfs-core/src/runtime/repo-nodejs')
+const { create: ipfsHttpClient } = require('@chris.troutner/ipfs-http-client')
+const IPFS = require('@chris.troutner/ipfs-core')
+const HttpApi = require('@chris.troutner/ipfs-http-server')
+const HttpGateway = require('@chris.troutner/ipfs-http-gateway')
+const gRPCServer = require('@chris.troutner/ipfs-grpc-server')
+const createRepo = require('@chris.troutner/ipfs-core/src/runtime/repo-nodejs')
 const { isElectron } = require('ipfs-utils/src/env')
 
 class Daemon {
   /**
-   * @param {import('ipfs-core').Options} options
+   * @param {import('@chris.troutner/ipfs-core').Options} options
    */
   constructor (options = {}) {
     this._options = options
@@ -89,7 +89,7 @@ class Daemon {
 }
 
 /**
- * @type {import('ipfs-core/src/types').Libp2pFactoryFn}
+ * @type {import('@chris.troutner/ipfs-core/src/types').Libp2pFactoryFn}
  */
 function getLibp2p ({ libp2pOptions, options, config, peerId }) {
   // Attempt to use any of the WebRTC versions available globally
