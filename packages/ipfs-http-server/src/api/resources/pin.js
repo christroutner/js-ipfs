@@ -5,7 +5,7 @@ const Boom = require('@hapi/boom')
 const map = require('it-map')
 const reduce = require('it-reduce')
 const { pipe } = require('it-pipe')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const streamResponse = require('../../utils/stream-response')
 const all = require('it-all')
 

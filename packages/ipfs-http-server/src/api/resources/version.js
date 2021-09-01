@@ -43,7 +43,7 @@ module.exports = {
       Version: version.version,
       Commit: version.commit,
       Repo: version.repo,
-      'ipfs-http-client': pkg.devDependencies['ipfs-http-client'],
+      '@chris.troutner/ipfs-http-client': pkg.devDependencies['@chris.troutner/ipfs-http-client'],
       'interface-ipfs-core': version['interface-ipfs-core']
     })
   }

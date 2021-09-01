@@ -5,7 +5,7 @@ const CID = require('cids')
 const { default: parseDuration } = require('parse-duration')
 const { Multiaddr } = require('multiaddr')
 const multibase = require('multibase')
-const toCidAndPath = require('ipfs-core-utils/src/to-cid-and-path')
+const toCidAndPath = require('@chris.troutner/ipfs-core-utils/src/to-cid-and-path')
 
 /**
  * @param {*} value

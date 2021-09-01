@@ -13,7 +13,7 @@ const LOG = 'ipfs:http-api'
 const LOG_ERROR = 'ipfs:http-api:error'
 
 /**
- * @typedef {import('ipfs-core-types').IPFS} IPFS
+ * @typedef {import('@chris.troutner/ipfs-core-types').IPFS} IPFS
  * @typedef {import('./types').Server} Server
  * @typedef {import('ipld')} IPLD
  * @typedef {import('libp2p')} libp2p

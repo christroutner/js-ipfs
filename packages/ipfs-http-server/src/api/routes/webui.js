@@ -1,6 +1,6 @@
 'use strict'
 
-const { gateway } = require('ipfs-http-gateway/src/resources')
+const { gateway } = require('@chris.troutner/ipfs-http-gateway/src/resources')
 
 const webuiCid = 'bafybeif4zkmu7qdhkpf3pnhwxipylqleof7rl6ojbe7mq3fzogz6m4xk3i' // v2.11.4
 

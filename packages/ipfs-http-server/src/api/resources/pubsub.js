@@ -55,7 +55,7 @@ exports.subscribe = {
       const output = pushable()
 
       /**
-       * @type {import('ipfs-core-types/src/pubsub').MessageHandlerFn}
+       * @type {import('@chris.troutner/ipfs-core-types/src/pubsub').MessageHandlerFn}
        */
       const handler = (msg) => {
         output.push({
@@ -66,7 +66,7 @@ exports.subscribe = {
         })
       }
 
-      // js-ipfs-http-client needs a reply, and go-ipfs does the same thing
+      // js-@chris.troutner/ipfs-http-client needs a reply, and go-ipfs does the same thing
       output.push({})
 
       const unsubscribe = () => {

@@ -1,7 +1,7 @@
 'use strict'
 
 const Joi = require('../../../utils/joi')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 
 const mfsFlush = {
   options: {

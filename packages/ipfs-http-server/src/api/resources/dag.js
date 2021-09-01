@@ -7,7 +7,7 @@ const Joi = require('../../utils/joi')
 const Boom = require('@hapi/boom')
 const {
   cidToString
-} = require('ipfs-core-utils/src/cid')
+} = require('@chris.troutner/ipfs-core-utils/src/cid')
 const all = require('it-all')
 const uint8ArrayToString = require('uint8arrays/to-string')
 const Block = require('ipld-block')

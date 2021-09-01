@@ -8,7 +8,7 @@ const Joi = require('../../utils/joi')
 const multibase = require('multibase')
 const Boom = require('@hapi/boom')
 const uint8ArrayToString = require('uint8arrays/to-string')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const debug = require('debug')
 const log = Object.assign(debug('ipfs:http-api:object'), {
   error: debug('ipfs:http-api:object:error')

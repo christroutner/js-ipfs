@@ -5,7 +5,7 @@ const multipart = require('../../utils/multipart-request-parser')
 const tar = require('it-tar')
 const Joi = require('../../utils/joi')
 const Boom = require('@hapi/boom')
-const { cidToString } = require('ipfs-core-utils/src/cid')
+const { cidToString } = require('@chris.troutner/ipfs-core-utils/src/cid')
 const { pipe } = require('it-pipe')
 const all = require('it-all')
 const streamResponse = require('../../utils/stream-response')
@@ -128,7 +128,7 @@ exports.get = {
         signal
       }),
       /**
-       * @param {AsyncIterable<import('ipfs-core-types/src/root').IPFSEntry>} source
+       * @param {AsyncIterable<import('@chris.troutner/ipfs-core-types/src/root').IPFSEntry>} source
        */
       async function * (source) {
         for await (const file of source) {
@@ -289,7 +289,7 @@ exports.add = {
         }
       },
       /**
-       * @param {import('ipfs-core-types/src/utils').ImportCandidateStream} source
+       * @param {import('@chris.troutner/ipfs-core-types/src/utils').ImportCandidateStream} source
        */
       async function * (source) {
         const progressStream = new PassThrough({
