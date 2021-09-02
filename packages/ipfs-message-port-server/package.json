@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "aegir build",
-    "test": "aegir test",
+    "test": "aegir test -- --exit",
     "test:browser": "aegir test -t browser",
     "test:webworker": "aegir test -t webworker",
     "test:chrome": "aegir test -t browser -t webworker -- --browsers ChromeHeadless",
