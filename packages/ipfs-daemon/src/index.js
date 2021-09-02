@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const log = require('debug')('ipfs:daemon')
