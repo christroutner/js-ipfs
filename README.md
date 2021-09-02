@@ -1,3 +1,10 @@
+## Overview
+
+This is a fork of js-ipfs v0.55.4. This code was forked for the following reasons:
+- [OrbitDB](https://github.com/orbitdb/orbit-db) currently [does not work with a version higher than 0.55.4](https://github.com/orbitdb/orbit-db/issues/901).
+- IPFS has [bandwidth issues](https://discuss.ipfs.io/t/js-ipfs-limit-bandwidth-per-peer/1458/13) that I've been unable to fix through the config object or API.
+
+
 <p align="center">
   <a href="https://js.ipfs.io" title="JS IPFS">
     <img src="https://ipfs.io/ipfs/Qme6KJdKcp85TYbLxuLV7oQzMiLremD7HMoXLZEmgo6Rnh/js-ipfs-sticker.png" alt="IPFS in JavaScript logo" width="244" />
