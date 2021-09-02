@@ -1,6 +1,6 @@
 {
   "name": "@chris.troutner/ipfs",
-  "version": "1.55.5",
+  "version": "2.0.0",
   "description": "JavaScript implementation of the IPFS specification",
   "keywords": [
     "IPFS"
@@ -38,13 +38,17 @@
     "dep-check": "aegir dep-check -i ipfs-core-types -i @types/*"
   },
   "dependencies": {
+    "@chris.troutner/ipfs-cli": "^0.7.0",
+    "@chris.troutner/ipfs-core": "^0.9.0",
     "debug": "^4.1.1",
-    "@chris.troutner/ipfs-cli": "^0.6.3",
-    "@chris.troutner/ipfs-core": "^0.8.1",
     "semver": "^7.3.2",
     "update-notifier": "^5.0.0"
   },
   "devDependencies": {
+    "@chris.troutner/interface-ipfs-core": "^0.148.0",
+    "@chris.troutner/ipfs-client": "^0.5.0",
+    "@chris.troutner/ipfs-core-types": "^0.6.0",
+    "@chris.troutner/ipfs-http-client": "^51.0.0",
     "@types/semver": "^7.3.4",
     "@types/update-notifier": "^5.0.0",
     "aegir": "^33.0.0",
@@ -52,10 +56,6 @@
     "cross-env": "^7.0.0",
     "electron-webrtc": "^0.3.0",
     "go-ipfs": "0.8.0",
-    "@chris.troutner/interface-ipfs-core": "^0.147.1",
-    "@chris.troutner/ipfs-client": "^0.4.4",
-    "@chris.troutner/ipfs-core-types": "^0.5.2",
-    "@chris.troutner/ipfs-http-client": "^50.1.3",
     "ipfs-interop": "^5.0.2",
     "ipfs-utils": "^8.1.2",
     "ipfsd-ctl": "^8.0.1",
