@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 'use strict'
-
+/*
 const { nanoid } = require('nanoid')
 const uint8ArrayFromString = require('uint8arrays/from-string')
 const { expect } = require('aegir/utils/chai')
@@ -309,3 +309,4 @@ describe('preload disabled', function () {
       .that.equals('ERR_TIMEOUT')
   })
 })
+*/

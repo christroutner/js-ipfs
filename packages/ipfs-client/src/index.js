@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const { create: httpClient } = require('@chris.troutner/ipfs-http-client')

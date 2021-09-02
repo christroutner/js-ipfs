@@ -21,6 +21,12 @@ const log = Object.assign(
  */
 const createPreloader = (options = {}) => {
   options.enabled = Boolean(options.enabled)
+  // console.log(`Preload is enabled? ${options.enabled}`)
+  // console.log('options: ', options)
+
+  // Force preloader to be disabled.
+  options.enabled = false
+
   options.addresses = options.addresses || []
   options.cache = options.cache || 1000
 

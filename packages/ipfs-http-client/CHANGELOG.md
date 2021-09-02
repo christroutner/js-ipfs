@@ -3,6 +3,121 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 51.0.0 (2021-09-02)
+
+
+### Bug Fixes
+
+* add default args for ipfs.add ([#2950](https://github.com/christroutner/js-ipfs/issues/2950)) ([a01f5b6](https://github.com/christroutner/js-ipfs/commit/a01f5b63cd92d225b10eff497f79caf4baab1973))
+* add missing type import ([#3664](https://github.com/christroutner/js-ipfs/issues/3664)) ([64cc1e1](https://github.com/christroutner/js-ipfs/commit/64cc1e1ea7da77f1553ac127e9fef1905f7c78da))
+* add onError to pubsub.subscribe types ([#3706](https://github.com/christroutner/js-ipfs/issues/3706)) ([d910aea](https://github.com/christroutner/js-ipfs/commit/d910aead8c8be6798cf838245511331b3f69634c)), closes [#3468](https://github.com/christroutner/js-ipfs/issues/3468)
+* dht.findPeer API endpoint returns ndjson ([#2965](https://github.com/christroutner/js-ipfs/issues/2965)) ([524ff32](https://github.com/christroutner/js-ipfs/commit/524ff32901e43460fe5b364bc4903ab249792874))
+* disable cors by default ([#3275](https://github.com/christroutner/js-ipfs/issues/3275)) ([3ff833d](https://github.com/christroutner/js-ipfs/commit/3ff833db6444a3e931db9b76bf74c3420e57ee02))
+* do not abort dht operation on error responses ([#3001](https://github.com/christroutner/js-ipfs/issues/3001)) ([a69f782](https://github.com/christroutner/js-ipfs/commit/a69f7828ccd77ab502689e45ed1112c9f804b386)), closes [#2991](https://github.com/christroutner/js-ipfs/issues/2991)
+* do not double normalise input url ([#3351](https://github.com/christroutner/js-ipfs/issues/3351)) ([4eb196c](https://github.com/christroutner/js-ipfs/commit/4eb196c07129d0ee90a7ad55feca69b6b349d8b7)), closes [#3331](https://github.com/christroutner/js-ipfs/issues/3331)
+* dont include util.textencoder in the browser ([#2919](https://github.com/christroutner/js-ipfs/issues/2919)) ([3207e3b](https://github.com/christroutner/js-ipfs/commit/3207e3b35c9c250332c03dd2a066e8ebcda35e43))
+* files ls should return string ([#3352](https://github.com/christroutner/js-ipfs/issues/3352)) ([16ecc74](https://github.com/christroutner/js-ipfs/commit/16ecc7485dfbb1f0c827c5f804974bb804f3dafd)), closes [#3345](https://github.com/christroutner/js-ipfs/issues/3345) [#2939](https://github.com/christroutner/js-ipfs/issues/2939) [#3330](https://github.com/christroutner/js-ipfs/issues/3330) [#2948](https://github.com/christroutner/js-ipfs/issues/2948)
+* fix gc tests ([#3008](https://github.com/christroutner/js-ipfs/issues/3008)) ([9f7f03e](https://github.com/christroutner/js-ipfs/commit/9f7f03e1ea672834b7f984657c7d7d7c768bcd6c))
+* fix ipfs.ls() for a single file object ([#3440](https://github.com/christroutner/js-ipfs/issues/3440)) ([f243dd1](https://github.com/christroutner/js-ipfs/commit/f243dd1c37fcb9786d77d129cd9b238457d18a15))
+* fix types ([#3662](https://github.com/christroutner/js-ipfs/issues/3662)) ([0fe8892](https://github.com/christroutner/js-ipfs/commit/0fe8892361180dab53ed3c3b006479b32a792d44))
+* fixes browser script tag example ([#3034](https://github.com/christroutner/js-ipfs/issues/3034)) ([ee8b769](https://github.com/christroutner/js-ipfs/commit/ee8b769b96f7e3c8414bbf85853ab4e21e8fd11c)), closes [#3027](https://github.com/christroutner/js-ipfs/issues/3027)
+* handle progress for empty files ([#3260](https://github.com/christroutner/js-ipfs/issues/3260)) ([9c36cb8](https://github.com/christroutner/js-ipfs/commit/9c36cb8f0c122e78c3cda3d0769d66c4d380787a)), closes [#3255](https://github.com/christroutner/js-ipfs/issues/3255)
+* loosen input type for swarm.connect and swarm.disconnect ([#3673](https://github.com/christroutner/js-ipfs/issues/3673)) ([46618c7](https://github.com/christroutner/js-ipfs/commit/46618c795bf5363ba3186645640fb81349231db7)), closes [#3638](https://github.com/christroutner/js-ipfs/issues/3638)
+* make http api only accept POST requests ([#2977](https://github.com/christroutner/js-ipfs/issues/2977)) ([943d4a8](https://github.com/christroutner/js-ipfs/commit/943d4a8cf2d4c4ff5ecd4814c59cb0aae0cfa1fd))
+* mark ipld options as partial ([#3669](https://github.com/christroutner/js-ipfs/issues/3669)) ([f98af8e](https://github.com/christroutner/js-ipfs/commit/f98af8ed24784929898bb5d33a64dc442c77074d))
+* optional arguments go in the options object ([#3118](https://github.com/christroutner/js-ipfs/issues/3118)) ([8cb8c73](https://github.com/christroutner/js-ipfs/commit/8cb8c73037e44894d756b70f344b3282463206f9))
+* pass headers to request ([#3018](https://github.com/christroutner/js-ipfs/issues/3018)) ([3ba00f8](https://github.com/christroutner/js-ipfs/commit/3ba00f8c6a8a057c5776d539a671a74d9565fb29)), closes [#3017](https://github.com/christroutner/js-ipfs/issues/3017)
+* pass timeout arg to server ([#2979](https://github.com/christroutner/js-ipfs/issues/2979)) ([049f085](https://github.com/christroutner/js-ipfs/commit/049f085fd206a1afb729fa825d8df38bf7aa8549))
+* regressions introduced by new releases of CID & multicodec ([#3442](https://github.com/christroutner/js-ipfs/issues/3442)) ([b5152d8](https://github.com/christroutner/js-ipfs/commit/b5152d8cc93ecc8d39fc353ea66d7eaf1661e3c0)), closes [/github.com/multiformats/js-cid/commit/0e11f035c9230e7f6d79c159ace9b80de88cb5eb#diff-25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26](https://github.com//github.com/multiformats/js-cid/commit/0e11f035c9230e7f6d79c159ace9b80de88cb5eb/issues/diff-25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26)
+* remove node globals ([#2932](https://github.com/christroutner/js-ipfs/issues/2932)) ([d0d2f74](https://github.com/christroutner/js-ipfs/commit/d0d2f74cef4e439c6d2baadba1f1f9f52534fcba))
+* report ipfs.add progress over http ([#3310](https://github.com/christroutner/js-ipfs/issues/3310)) ([39cad4b](https://github.com/christroutner/js-ipfs/commit/39cad4b76b950ea6a76477fd01f8631b8bd9aa1e))
+* send blobs when running ipfs-http-client in the browser ([#3184](https://github.com/christroutner/js-ipfs/issues/3184)) ([6b24463](https://github.com/christroutner/js-ipfs/commit/6b24463431497bd13b579a730ad7063345729ad9)), closes [#3138](https://github.com/christroutner/js-ipfs/issues/3138)
+* small whitespace change ([0d4604d](https://github.com/christroutner/js-ipfs/commit/0d4604dde995edb69483c03622e38448d31eeb88))
+* stalling subscription on (node) http-client when daemon is stopped ([#3468](https://github.com/christroutner/js-ipfs/issues/3468)) ([0266abf](https://github.com/christroutner/js-ipfs/commit/0266abf0c4b817636172f78c6e91eb4dd5aad451)), closes [#3465](https://github.com/christroutner/js-ipfs/issues/3465)
+* still load dag-pb, dag-cbor and raw when specifying custom formats ([#3132](https://github.com/christroutner/js-ipfs/issues/3132)) ([a96e3bc](https://github.com/christroutner/js-ipfs/commit/a96e3bc9e3763004beafc24b98efa85ffa665622)), closes [#3129](https://github.com/christroutner/js-ipfs/issues/3129)
+* support keychain without pass ([#3212](https://github.com/christroutner/js-ipfs/issues/3212)) ([7e0e85c](https://github.com/christroutner/js-ipfs/commit/7e0e85c2f003a09845b1dbe4200ca61366933b05))
+* typedef resolution & add examples that use types ([#3359](https://github.com/christroutner/js-ipfs/issues/3359)) ([dc2795a](https://github.com/christroutner/js-ipfs/commit/dc2795a4f3b515683d09967ce611bf87d5e67f86)), closes [#3356](https://github.com/christroutner/js-ipfs/issues/3356) [#3358](https://github.com/christroutner/js-ipfs/issues/3358)
+* typeof bug when passing timeout to dag.get ([#3035](https://github.com/christroutner/js-ipfs/issues/3035)) ([026a542](https://github.com/christroutner/js-ipfs/commit/026a5423e00992968840c9236afe47bdab9ee834))
+* update to new aegir ([#3528](https://github.com/christroutner/js-ipfs/issues/3528)) ([49f7880](https://github.com/christroutner/js-ipfs/commit/49f78807d7e26483bd926b45cc7e0f797d77e41b))
+* use fetch in electron renderer and electron-fetch in main ([#3251](https://github.com/christroutner/js-ipfs/issues/3251)) ([639d71f](https://github.com/christroutner/js-ipfs/commit/639d71f7ac8f66d9633e753a2a6be927e14a5af0))
+* use https agent for https requests ([#3490](https://github.com/christroutner/js-ipfs/issues/3490)) ([ac4bb48](https://github.com/christroutner/js-ipfs/commit/ac4bb4841ce7c191408e1b2bb906284ae0dbd975)), closes [#3474](https://github.com/christroutner/js-ipfs/issues/3474)
+* validate ipns records with inline public keys ([#3224](https://github.com/christroutner/js-ipfs/issues/3224)) ([5cc0e08](https://github.com/christroutner/js-ipfs/commit/5cc0e086b036e7ba40b09768b67b7067adca43c1))
+* **http-client:** allow stream option to be overridden ([#3205](https://github.com/christroutner/js-ipfs/issues/3205)) ([7aba835](https://github.com/christroutner/js-ipfs/commit/7aba8354134d0d1d8132892c338b474e20e56b76))
+
+
+### chore
+
+* move mfs and multipart files into core ([#2811](https://github.com/christroutner/js-ipfs/issues/2811)) ([82b9e08](https://github.com/christroutner/js-ipfs/commit/82b9e085330e6c6290e6f3dd29678247984ffdce))
+* update dep version and ignore interop test for raw leaves ([#2747](https://github.com/christroutner/js-ipfs/issues/2747)) ([6376cec](https://github.com/christroutner/js-ipfs/commit/6376cec2b4beccef4751c498088f600ec7788118))
+* update deps ([#3514](https://github.com/christroutner/js-ipfs/issues/3514)) ([061d77c](https://github.com/christroutner/js-ipfs/commit/061d77cc03f40af5a3bc3590481e1e5836e7f0d8))
+* update node version in docker build ([#3603](https://github.com/christroutner/js-ipfs/issues/3603)) ([087fd1e](https://github.com/christroutner/js-ipfs/commit/087fd1eb402d1b933730e09c1d0cfb21067e9992))
+* upgrade deps with new typedefs ([#3550](https://github.com/christroutner/js-ipfs/issues/3550)) ([a418a52](https://github.com/christroutner/js-ipfs/commit/a418a521574c878d7aabd0ad2fd8d516908a3756))
+
+
+### Features
+
+* add config.getAll ([#3071](https://github.com/christroutner/js-ipfs/issues/3071)) ([16587f1](https://github.com/christroutner/js-ipfs/commit/16587f16e1b3ae525c099b1975748510638aceee))
+* add grpc server and client ([#3403](https://github.com/christroutner/js-ipfs/issues/3403)) ([a9027e0](https://github.com/christroutner/js-ipfs/commit/a9027e0ec0cea9a4f34b4f2f52e09abb35237384)), closes [#2519](https://github.com/christroutner/js-ipfs/issues/2519) [#2838](https://github.com/christroutner/js-ipfs/issues/2838) [#2943](https://github.com/christroutner/js-ipfs/issues/2943) [#2854](https://github.com/christroutner/js-ipfs/issues/2854) [#2864](https://github.com/christroutner/js-ipfs/issues/2864)
+* add interface and http client versions to version output ([#3125](https://github.com/christroutner/js-ipfs/issues/3125)) ([65f8b23](https://github.com/christroutner/js-ipfs/commit/65f8b23f550f939e94aaf6939894a513519e6d68)), closes [#2878](https://github.com/christroutner/js-ipfs/issues/2878)
+* add protocol list to ipfs id ([#3250](https://github.com/christroutner/js-ipfs/issues/3250)) ([1b6cf60](https://github.com/christroutner/js-ipfs/commit/1b6cf600a6b1348199457ca1fe6f314b6eff8c46))
+* add typeScript support ([#3236](https://github.com/christroutner/js-ipfs/issues/3236)) ([be26dd7](https://github.com/christroutner/js-ipfs/commit/be26dd723ed8c76efee149a993a8ade7f75f960e)), closes [#2945](https://github.com/christroutner/js-ipfs/issues/2945) [#1166](https://github.com/christroutner/js-ipfs/issues/1166)
+* add typescript support ([#3267](https://github.com/christroutner/js-ipfs/issues/3267)) ([6816bc6](https://github.com/christroutner/js-ipfs/commit/6816bc64ccb9bf852c2b9a26d9ddd19b9439dae6)), closes [#2945](https://github.com/christroutner/js-ipfs/issues/2945) [#1166](https://github.com/christroutner/js-ipfs/issues/1166)
+* allow passing a http.Agent to ipfs-http-client in node ([#3474](https://github.com/christroutner/js-ipfs/issues/3474)) ([fe93ba0](https://github.com/christroutner/js-ipfs/commit/fe93ba01a0c62cead7cc4e0023de2d2a00adbc02)), closes [/tools.ietf.org/html/rfc2616#section-8](https://github.com//tools.ietf.org/html/rfc2616/issues/section-8) [#3464](https://github.com/christroutner/js-ipfs/issues/3464)
+* allow passing a http.Agent to the grpc client ([#3477](https://github.com/christroutner/js-ipfs/issues/3477)) ([c5f0bc5](https://github.com/christroutner/js-ipfs/commit/c5f0bc5eeee15369b7d02901035b04184a8608d2)), closes [#3474](https://github.com/christroutner/js-ipfs/issues/3474)
+* allow passing the id of a network peer to ipfs.id ([#3386](https://github.com/christroutner/js-ipfs/issues/3386)) ([00fd709](https://github.com/christroutner/js-ipfs/commit/00fd709a7b71e7cf354ea452ebce460dd7375d34))
+* cancellable api calls ([#2993](https://github.com/christroutner/js-ipfs/issues/2993)) ([2b24f59](https://github.com/christroutner/js-ipfs/commit/2b24f590041a0df9da87b75ae2344232fe22fe3a)), closes [#3015](https://github.com/christroutner/js-ipfs/issues/3015)
+* enable custom formats for dag put and get ([#3347](https://github.com/christroutner/js-ipfs/issues/3347)) ([3250ff4](https://github.com/christroutner/js-ipfs/commit/3250ff453a1d3275cc4ab746f59f9f70abd5cc5f))
+* ipns publish example ([#3207](https://github.com/christroutner/js-ipfs/issues/3207)) ([91faec6](https://github.com/christroutner/js-ipfs/commit/91faec6e3d89b0d9883b8d7815c276d44048e739))
+* pass file name to add/addAll progress handler ([#3372](https://github.com/christroutner/js-ipfs/issues/3372)) ([69681a7](https://github.com/christroutner/js-ipfs/commit/69681a7d7a8434c11f6f10e370e324f5a3d31042)), closes [ipfs/js-ipfs-unixfs#87](https://github.com/ipfs/js-ipfs-unixfs/issues/87)
+* remove ky from http-client and utils ([#2810](https://github.com/christroutner/js-ipfs/issues/2810)) ([9bc9625](https://github.com/christroutner/js-ipfs/commit/9bc96252686d0bbbfdb2a3300bb17b80eafdaf00)), closes [#2801](https://github.com/christroutner/js-ipfs/issues/2801)
+* share IPFS node between browser tabs ([#3081](https://github.com/christroutner/js-ipfs/issues/3081)) ([1b8b1b8](https://github.com/christroutner/js-ipfs/commit/1b8b1b822a252498889c54972a1f57e1fedc39d0)), closes [#3022](https://github.com/christroutner/js-ipfs/issues/3022)
+* store blocks by multihash instead of CID ([#3124](https://github.com/christroutner/js-ipfs/issues/3124)) ([03b17f5](https://github.com/christroutner/js-ipfs/commit/03b17f5e2d290e84aa0cb541079b79e468e7d1bd))
+* store pins in datastore instead of a DAG ([#2771](https://github.com/christroutner/js-ipfs/issues/2771)) ([64b7fe4](https://github.com/christroutner/js-ipfs/commit/64b7fe41738cbe96d5a9075f0c01156c6f889c40))
+* support  remote pinning services in ipfs-http-client ([#3293](https://github.com/christroutner/js-ipfs/issues/3293)) ([ba240fd](https://github.com/christroutner/js-ipfs/commit/ba240fdf93edc88028315483240d7822a7ca88ed))
+* support loading arbitrary ipld formats in the http client ([#3073](https://github.com/christroutner/js-ipfs/issues/3073)) ([bd12773](https://github.com/christroutner/js-ipfs/commit/bd127730039ab79dd7ad22b31245939ee01a6514))
+* sync with go-ipfs 0.5 ([#3013](https://github.com/christroutner/js-ipfs/issues/3013)) ([0900bb9](https://github.com/christroutner/js-ipfs/commit/0900bb9b8123edb689a137a006c5507d8503f693))
+* type check & generate defs from jsdoc ([#3281](https://github.com/christroutner/js-ipfs/issues/3281)) ([bbcaf34](https://github.com/christroutner/js-ipfs/commit/bbcaf34111251b142273a5675f4754ff68bd9fa0))
+* update hapi to v20 ([#3245](https://github.com/christroutner/js-ipfs/issues/3245)) ([1aeef89](https://github.com/christroutner/js-ipfs/commit/1aeef89c73f42a2f6cceb7f0598400141ce40e23))
+
+
+### BREAKING CHANGES
+
+* Minimum supported node version is 14
+* all core api methods now have types, some method signatures have changed, named exports are now used by the http, grpc and ipfs client modules
+* ipfs-repo upgrade requires repo migration to v10
+* types returned by `ipfs.files.ls` are now strings, in line with the docs but different to previous behaviour
+
+Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
+* - CORS origins will need to be [configured manually](https://github.com/ipfs/js-ipfs/blob/master/packages/ipfs-http-client/README.md#cors) before use with ipfs-http-client
+* remove support for key.export over the http api
+* - not really
+* Where we used to accept all and any HTTP methods, now only POST is
+accepted.  The API client will now only send POST requests too.
+
+* test: add tests to make sure we are post-only
+
+* chore: upgrade ipfs-utils
+
+* fix: return 405 instead of 404 for bad methods
+
+* fix: reject browsers that do not send an origin
+
+Also fixes running interface tests over http in browsers against
+js-ipfs
+* When the path passed to `ipfs.files.stat(path)` was a hamt sharded dir, the resovled
+value returned by js-ipfs previously had a `type` property of with a value of
+`'hamt-sharded-directory'`.  To bring it in line with go-ipfs this value is now
+`'directory'`.
+* Files that fit into one block imported with either `--cid-version=1`
+or `--raw-leaves=true` previously returned a CID that resolved to
+a raw node (e.g. a buffer). Returned CIDs now resolve to a `dag-pb`
+node that contains a UnixFS entry. This is to allow setting metadata
+on small files with CIDv1.
+
+
+
+
+
 ## [50.1.2](https://github.com/ipfs/js-ipfs/compare/ipfs-http-client@50.1.1...ipfs-http-client@50.1.2) (2021-06-18)
 
 **Note:** Version bump only for package ipfs-http-client
