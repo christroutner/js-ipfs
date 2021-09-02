@@ -2,7 +2,7 @@
 'use strict'
 
 // @ts-ignore
-const TimeoutController = require('timeout-abort-controller')
+const TimeoutController = require('@chris.troutner/timeout-abort-controller')
 const { anySignal } = require('any-signal')
 const { default: parseDuration } = require('parse-duration')
 const { TimeoutError } = require('./errors')
