@@ -1,6 +1,6 @@
 {
   "name": "@chris.troutner/ipfs",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "JavaScript implementation of the IPFS specification",
   "keywords": [
     "IPFS"
@@ -38,8 +38,8 @@
     "dep-check": "aegir dep-check -i ipfs-core-types -i @types/*"
   },
   "dependencies": {
-    "@chris.troutner/ipfs-cli": "^0.7.1",
-    "@chris.troutner/ipfs-core": "^0.9.1",
+    "@chris.troutner/ipfs-cli": "^0.7.2",
+    "@chris.troutner/ipfs-core": "^0.9.2",
     "debug": "^4.1.1",
     "semver": "^7.3.2",
     "update-notifier": "^5.0.0"

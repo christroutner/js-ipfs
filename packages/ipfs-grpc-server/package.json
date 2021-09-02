@@ -1,6 +1,6 @@
 {
   "name": "@chris.troutner/ipfs-grpc-server",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A server library for the IPFS gRPC API",
   "keywords": [
     "ipfs"
@@ -46,7 +46,7 @@
     "ws": "^7.3.1"
   },
   "devDependencies": {
-    "@chris.troutner/ipfs-core": "^0.9.1",
+    "@chris.troutner/ipfs-core": "^0.9.2",
     "@types/ws": "^7.4.0",
     "aegir": "^33.0.0",
     "it-all": "^1.0.4",
