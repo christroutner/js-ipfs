@@ -1,6 +1,6 @@
 {
   "name": "@chris.troutner/ipfs-cli",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "JavaScript implementation of the IPFS specification",
   "keywords": [
     "IPFS"
@@ -30,11 +30,11 @@
     "build": "aegir build --no-bundle"
   },
   "dependencies": {
-    "@chris.troutner/ipfs-core": "^0.9.0",
-    "@chris.troutner/ipfs-core-types": "^0.6.0",
-    "@chris.troutner/ipfs-core-utils": "^0.9.0",
-    "@chris.troutner/ipfs-daemon": "^0.8.0",
-    "@chris.troutner/ipfs-http-client": "^51.0.0",
+    "@chris.troutner/ipfs-core": "^0.9.1",
+    "@chris.troutner/ipfs-core-types": "^0.6.1",
+    "@chris.troutner/ipfs-core-utils": "^0.9.1",
+    "@chris.troutner/ipfs-daemon": "^0.8.1",
+    "@chris.troutner/ipfs-http-client": "^51.0.1",
     "byteman": "^1.3.5",
     "cid-tool": "^3.0.0",
     "cids": "^1.1.6",

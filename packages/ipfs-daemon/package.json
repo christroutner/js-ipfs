@@ -1,6 +1,6 @@
 {
   "name": "@chris.troutner/ipfs-daemon",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "JavaScript implementation of the IPFS specification",
   "keywords": [
     "IPFS"
@@ -30,12 +30,12 @@
     "build": "aegir build --no-bundle"
   },
   "dependencies": {
-    "@chris.troutner/ipfs-core": "^0.9.0",
-    "@chris.troutner/ipfs-core-types": "^0.6.0",
-    "@chris.troutner/ipfs-grpc-server": "^0.4.0",
-    "@chris.troutner/ipfs-http-client": "^51.0.0",
-    "@chris.troutner/ipfs-http-gateway": "^0.5.0",
-    "@chris.troutner/ipfs-http-server": "^0.6.0",
+    "@chris.troutner/ipfs-core": "^0.9.1",
+    "@chris.troutner/ipfs-core-types": "^0.6.1",
+    "@chris.troutner/ipfs-grpc-server": "^0.4.1",
+    "@chris.troutner/ipfs-http-client": "^51.0.1",
+    "@chris.troutner/ipfs-http-gateway": "^0.5.1",
+    "@chris.troutner/ipfs-http-server": "^0.6.1",
     "@mapbox/node-pre-gyp": "^1.0.5",
     "debug": "^4.1.1",
     "dlv": "^1.1.3",

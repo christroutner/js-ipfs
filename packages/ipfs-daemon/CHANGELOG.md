@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/christroutner/js-ipfs/compare/@chris.troutner/ipfs-daemon@0.8.0...@chris.troutner/ipfs-daemon@0.8.1) (2021-09-02)
+
+
+### Bug Fixes
+
+* **retimer:** Updating instances of retimer to v3.0.0 ([bc56802](https://github.com/christroutner/js-ipfs/commit/bc568028ca202d9b07068cc8474d3941ddf182e9))
+
+
+
+
+
 # 0.8.0 (2021-09-02)
 
 
