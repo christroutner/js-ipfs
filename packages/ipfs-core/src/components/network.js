@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 'use strict'
 
 const IPFSBitswap = require('ipfs-bitswap')
