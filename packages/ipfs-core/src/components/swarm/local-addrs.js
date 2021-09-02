@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const withTimeoutOption = require('@chris.troutner/ipfs-core-utils/src/with-timeout-option')

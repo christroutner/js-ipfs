@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict'
 
 const { TieredDatastore } = require('datastore-core')
