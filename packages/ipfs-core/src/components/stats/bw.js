@@ -55,8 +55,12 @@ function getBandwidthStats (libp2p, opts) {
   return {
     totalIn: BigInt(snapshot.dataReceived.toString()),
     totalOut: BigInt(snapshot.dataSent.toString()),
-    rateIn: BigInt(movingAverages.dataReceived[60000].movingAverage() / 60),
-    rateOut: BigInt(movingAverages.dataSent[60000].movingAverage() / 60)
+    rateIn: BigInt(
+      Math.floor(movingAverages.dataReceived[60000].movingAverage() / 60)
+    ),
+    rateOut: BigInt(
+      Math.floor(movingAverages.dataSent[60000].movingAverage() / 60)
+    )
   }
 }
 
@@ -79,7 +83,8 @@ module.exports = ({ network }) => {
     const interval = options.interval || 1000
     let ms = -1
     try {
-      ms = typeof interval === 'string' ? parseDuration(interval) || -1 : interval
+      ms =
+        typeof interval === 'string' ? parseDuration(interval) || -1 : interval
       if (!ms || ms < 0) throw new Error('invalid duration')
     } catch (err) {
       throw errCode(err, 'ERR_INVALID_POLL_INTERVAL')
@@ -90,7 +95,9 @@ module.exports = ({ network }) => {
       while (true) {
         yield getBandwidthStats(libp2p, options)
         // eslint-disable-next-line no-loop-func
-        await new Promise(resolve => { timeoutId = setTimeout(resolve, ms) })
+        await new Promise(resolve => {
+          timeoutId = setTimeout(resolve, ms)
+        })
       }
     } finally {
       clearTimeout(timeoutId)
